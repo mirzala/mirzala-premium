@@ -1,0 +1,23 @@
+[
+  {
+    "id": "urun-1",
+    "title": "Test Ürün 1",
+    "description": "Bu bir deneme açıklamasıdır. Gerçek ürün açıklaması buraya gelecek.",
+    "image": "https://picsum.photos/id/21/600/600",
+    "url": "https://www.example.com/1"
+  },
+  {
+    "id": "urun-2",
+    "title": "Test Ürün 2",
+    "description": "İkinci ürünün açıklaması. Aşağı kaydırarak sonraki ürüne geçebilirsiniz.",
+    "image": "https://picsum.photos/id/30/600/600",
+    "url": "https://www.example.com/2"
+  },
+  {
+    "id": "urun-3",
+    "title": "Test Ürün 3",
+    "description": "Üçüncü ürün. Klavyede yukarı/aşağı ok tuşları da çalışır.",
+    "image": "https://picsum.photos/id/40/600/600",
+    "url": "https://www.example.com/3"
+  }
+]
