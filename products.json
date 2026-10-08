@@ -1,12 +1,5 @@
 [
   {
-    "id": "urun-1",
-    "title": "Test Ürün 1",
-    "description": "Bu bir deneme açıklamasıdır. Gerçek ürün açıklaması buraya gelecek.",
-    "image": "https://picsum.photos/id/21/600/600",
-    "url": "https://www.example.com/1"
-  },
-  {
     "id": "urun-2",
     "title": "Test Ürün 2",
     "description": "İkinci ürünün açıklaması. Aşağı kaydırarak sonraki ürüne geçebilirsiniz.",
