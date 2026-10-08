@@ -1,0 +1,157 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: #0b0f19;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 9:16 çerçeve */
+#stage {
+  position: relative;
+  width: min(100vw - 20px, 410px);
+  height: min(100dvh - 30px, 760px);
+  background: #0f172a;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 3px solid;
+  border-color: #00f2fe #00ff87 #ff007f #7928ca;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .9);
+}
+
+/* Üst bar */
+#topbar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: linear-gradient(to bottom, rgba(15,23,42,.95), transparent);
+}
+.brand { font-weight: 800; letter-spacing: .12em; font-size: .9rem; }
+.sponsored { font-size: .7rem; opacity: .75; }
+
+/* Kaydırılan akış */
+#feed {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+#feed::-webkit-scrollbar { display: none; }
+
+/* Tek ürün kartı */
+.card {
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 22px 18px;
+}
+
+.card-img {
+  flex: 0 0 38%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  min-height: 0;
+}
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.card-desc {
+  font-size: .9rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.card-cta {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #166466;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: auto;
+}
+.card-cta:hover { background: #1b7a7d; }
+
+.disclosure {
+  font-size: .62rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Yukarı/aşağı butonları */
+#nav {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#nav button {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,242,254,.6);
+  background: rgba(8,12,20,.9);
+  color: #00f2fe;
+  font-size: .8rem;
+  cursor: pointer;
+}
+#nav button:hover { border-color: #00ff87; }
+
+#counter {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  font-size: .7rem;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #feed { scroll-behavior: auto; }
+}
