@@ -929,7 +929,7 @@ body {
 
   .mp-controls {
   position: absolute;
-  right: 14px;
+  right: 8px; /* Kartın sağ kenarına sıfırlar */
   top: 50%;
   transform: translateY(-50%);
   width: auto;
@@ -985,10 +985,9 @@ body {
 @media (max-width: 360px) {
 
   .mp-card {
-    padding-left: 12px;
-
-    padding-right: 12px;
-  }
+  position: relative; /* İkonların karta göre konumlanmasını sağlar */
+  /* Diğer kart özellikleriniz burada kalabilir */
+}
 
 
   .mp-logo {
