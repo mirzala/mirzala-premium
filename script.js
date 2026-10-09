@@ -9,21 +9,29 @@ fetch("products.json")
     return response.json();
   })
   .then(function (products) {
+    var urlParams = new URLSearchParams(window.location.search);
+    var targetMki = urlParams.get("mki");
+    var targetCard = null;
+
     products.forEach(function (p) {
       var card = document.createElement("section");
       card.className = "card";
-      card.id = p.id;
+      var uniqueId = p.mki || p.id;
+      card.id = uniqueId;
 
       card.innerHTML =
         '<div class="card-img"><img loading="lazy" alt=""></div>' +
         '<div class="card-body">' +
           '<h2 class="card-title"></h2>' +
           '<p class="card-desc"></p>' +
+          '<div class="card-actions">' +
+            '<button type="button" class="action-btn btn-whatsapp" onclick="shareOnWhatsApp(\'' + (p.title || '').replace(/'/g, "\\'") + '\', \'' + uniqueId + '\')" title="WhatsApp ile Paylaş">WhatsApp</button>' +
+            '<button type="button" class="action-btn btn-copy" onclick="copyProductLink(\'' + uniqueId + '\', this)" title="Bağlantıyı Kopyala">Kopyala</button>' +
+          '</div>' +
           '<a class="card-cta" target="_blank" rel="sponsored noopener">Ürünü incele</a>' +
           '<p class="disclosure">Sponsorlu bağlantı: satın alırsanız komisyon alabiliriz.</p>' +
         '</div>';
 
-      // textContent kullanıyoruz: metin güvenli yazılır
       card.querySelector("img").src = p.image;
       card.querySelector("img").alt = p.title;
       card.querySelector(".card-title").textContent = p.title;
@@ -31,7 +39,21 @@ fetch("products.json")
       card.querySelector(".card-cta").href = p.url;
 
       feed.appendChild(card);
+
+      if (targetMki && uniqueId === targetMki) {
+        targetCard = card;
+      }
     });
+
+    if (targetCard) {
+      setTimeout(function () {
+        targetCard.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    }
+  })
+  .catch(function (error) {
+    console.error("Hata:", error);
+  });
   })
   .catch(function (error) {
     console.error("Hata:", error);
