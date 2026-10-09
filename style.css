@@ -48,6 +48,7 @@ body {
 
 /* =========================================================
    MAIN PREMIUM CARD
+   Flex kolon: üst sabit / orta esnek / alt tabanda
    ========================================================= */
 
 .mp-card {
@@ -60,8 +61,8 @@ body {
   min-width: 0;
   min-height: 0;
   box-sizing: border-box;
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   background: radial-gradient(
       circle at 50% 8%,
@@ -75,21 +76,17 @@ body {
   border-bottom: 4px solid #ff008c;
   border-left: 4px solid #7200ff;
   border-radius: 34px;
-  padding: 0 28px 0 28px;
+  padding: 0 28px;
 }
 
 /* =========================================================
    TOP AREA
+   display: contents -> HTML'de div kapansa da kapanmasa da
+   içindeki öğeler doğrudan kartın flex akışına katılır.
    ========================================================= */
 
 .mp-top-area {
-  width: 100%;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
+  display: contents;
 }
 
 /* =========================================================
@@ -105,7 +102,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 /* =========================================================
@@ -174,13 +171,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 #mp-image-link {
   width: min(300px, 72vw);
-  height: min(300px, 32dvh);
-  min-height: 180px;
+  height: min(300px, 30dvh);
+  min-height: 150px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -201,7 +198,7 @@ body {
 }
 
 /* =========================================================
-   CONTROLS (Kartın Sağ Kenarına Sabitlenmiş)
+   CONTROLS (kartın sağ kenarına sabit)
    ========================================================= */
 
 .mp-controls {
@@ -265,18 +262,20 @@ body {
 
 /* =========================================================
    MIDDLE FLEXIBLE AREA
+   Kalan tüm boşluğu doldurur, içeriği dikey + yatay ortalar
    ========================================================= */
 
 .mp-middle-area {
+  flex: 1 1 0;
   width: 100%;
   min-width: 0;
   min-height: 0;
-  overflow-y: auto;
+  box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   scrollbar-width: thin;
 }
 
@@ -284,8 +283,8 @@ body {
   width: 100%;
   max-width: 700px;
   box-sizing: border-box;
-  padding: 10px 0 10px;
   margin: auto;
+  padding: 10px 28px; /* oklarla çakışmasın */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -297,7 +296,7 @@ body {
   width: 100%;
   margin: 0 0 10px;
   padding: 0;
-  font-size: clamp(16px, 1.8vw, 20px);
+  font-size: clamp(18px, 5vw, 22px);
   line-height: 1.25;
   font-weight: 800;
   text-align: center;
@@ -316,14 +315,15 @@ body {
 }
 
 /* =========================================================
-   BOTTOM AREA & CTA
+   BOTTOM AREA & CTA (tabanda sabit)
    ========================================================= */
 
 .mp-bottom-area {
+  flex: 0 0 auto;
+  margin-top: auto;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
-  flex-shrink: 0;
   padding-bottom: 8px;
 }
 
@@ -507,11 +507,6 @@ body {
     font-size: 13px;
   }
 
-  #mp-product-title {
-    font-size: 21px;
-    line-height: 1.23;
-  }
-
   #mp-product-description {
     font-size: 16px;
     line-height: 1.4;
@@ -535,11 +530,11 @@ body {
   #mp-image-link {
     width: 74vw;
     height: 27dvh;
-    min-height: 155px;
+    min-height: 140px;
   }
 
   #mp-product-title {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   #mp-product-description {
@@ -551,74 +546,4 @@ body {
     min-height: 50px;
     font-size: 16px;
   }
-}
-
-
-/* =========================================================
-   FINAL LAYOUT
-   Product title/description centered in the middle area;
-   CTA and affiliate disclosure anchored at the bottom.
-   ========================================================= */
-
-.mp-card {
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  min-height: 0;
-}
-
-.mp-top-area {
-  min-width: 0;
-  flex-shrink: 0;
-}
-
-.mp-middle-area {
-  width: 100%;
-  min-width: 0;
-  min-height: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scrollbar-width: thin;
-}
-
-.mp-product-info {
-  width: 100%;
-  max-width: 700px;
-  box-sizing: border-box;
-  margin: auto;
-  padding: 10px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#mp-product-title,
-#mp-product-description {
-  width: 100%;
-  text-align: center;
-}
-
-.mp-bottom-area {
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-  align-self: end;
-  flex-shrink: 0;
-  padding-bottom: 8px;
-}
-
-.mp-cta-wrapper {
-  width: 100%;
-  margin: 0;
-}
-
-.mp-disclosure {
-  width: 100%;
-  margin-top: 6px;
-  text-align: center;
 }
