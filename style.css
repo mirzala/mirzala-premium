@@ -423,24 +423,18 @@ body {
 
 .mp-middle-area {
   width: 100%;
-
   min-width: 0;
   min-height: 0;
-
   overflow-y: auto;
   overflow-x: hidden;
-
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   box-sizing: border-box;
-
   scrollbar-width: thin;
 }
-
 
 /* =========================================================
    PRODUCT INFORMATION
