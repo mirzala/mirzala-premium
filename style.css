@@ -207,7 +207,7 @@ body {
 .mp-controls {
   position: absolute;
   right: 8px;
-  top: 39%;
+  top: 44%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
