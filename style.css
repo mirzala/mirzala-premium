@@ -1,204 +1,673 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* =========================================================
+   MIRZALA PREMIUM
+   GLOBAL
+   ========================================================= */
 
-html, body {
-  height: 100%;
-  background: #0b0f19;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  overflow: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 9:16 çerçeve */
-#stage {
-  position: relative;
-  width: min(100vw - 20px, 410px);
-  height: min(100dvh - 30px, 760px);
-  background: #0f172a;
-  border-radius: 26px;
-  overflow: hidden;
-  border: 3px solid;
-  border-color: #00f2fe #00ff87 #ff007f #7928ca;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .9);
-}
 
-/* Üst bar */
-#topbar {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  z-index: 10;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  background: linear-gradient(to bottom, rgba(15,23,42,.95), transparent);
-}
-.brand { font-weight: 800; letter-spacing: .12em; font-size: .9rem; }
-.sponsored { font-size: .7rem; opacity: .75; }
+/* =========================================================
+   APP WRAPPER
+   ========================================================= */
 
-/* Kaydırılan akış */
-#feed {
-  height: 100%;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none;
-  overscroll-behavior: contain;
-}
-#feed::-webkit-scrollbar { display: none; }
-
-/* Tek ürün kartı */
-.card {
-  height: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 22px 18px;
-}
-
-.card-img {
-  flex: 0 0 38%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-}
-.card-img img {
+#mirzala-premium-app {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 14px 7px;
+
+  background: #ffffff;
 }
 
-.card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-top: 16px;
-  min-height: 0;
-}
-.card-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-.card-desc {
-  font-size: .9rem;
-  line-height: 1.45;
-  color: #cbd5e1;
+
+/* =========================================================
+   MAIN CARD WRAPPER
+   ========================================================= */
+
+.mp-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+
+  min-height: calc(100vh - 28px);
+
+  box-sizing: border-box;
+
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
+
+  border-radius: 34px;
+
+  background:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(45, 63, 93, 0.35),
+      transparent 24%
+    ),
+    #0d1729;
+
+  color: #ffffff;
+
+  padding: 18px 30px 14px;
+
+  border: 3px solid transparent;
+
+  box-shadow:
+    0 0 0 2px #00e5ff,
+    0 0 0 4px #6d00ff,
+    0 0 0 6px #00e5a8;
 }
 
-.card-cta {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  background: #166466;
-  color: #fff;
-  font-weight: 600;
-  padding: 12px;
-  border-radius: 12px;
-  margin-top: auto;
-}
-.card-cta:hover { background: #1b7a7d; }
 
-.disclosure {
-  font-size: .62rem;
-  color: #94a3b8;
-  text-align: center;
-  margin-top: 8px;
-}
+/* =========================================================
+   HEADER
+   ========================================================= */
 
-/* Yukarı/aşağı butonları */
-#nav {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+.mp-header {
+  position: relative;
+
+  width: 100%;
+  height: 52px;
+
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   HOME BUTTON
+   ========================================================= */
+
+.mp-home-button {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.20);
+
+  background: rgba(0, 0, 0, 0.12);
+
+  color: #00eaff;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.2s ease;
+}
+
+.mp-home-button:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.mp-logo {
+  font-size: 21px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   SPONSORED
+   ========================================================= */
+
+.mp-sponsored {
+  position: absolute;
+
+  right: 0;
+  top: 12px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+   ========================================================= */
+
+.mp-image-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1px;
+}
+
+
+/* =========================================================
+   IMAGE LINK
+   ========================================================= */
+
+#mp-image-link {
+  display: flex;
+
+  width: 100%;
+  max-width: 300px;
+
+  min-height: 300px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+#mp-product-image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 300px;
+
+  object-fit: contain;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   PRODUCT CONTROLS
+   ========================================================= */
+
+.mp-controls {
+  width: 100%;
+
+  display: flex;
+
   flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 3px;
+
+  margin-top: 7px;
+}
+
+
+/* =========================================================
+   CONTROL BUTTON
+   ========================================================= */
+
+.mp-control-button {
+  width: 31px;
+  height: 31px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #00eaff;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.mp-control-button:hover {
+  transform: scale(1.15);
+}
+
+.mp-control-button:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================================================
+   SHARE BUTTON
+   ========================================================= */
+
+.mp-share-button {
+  color: #ffffff;
+
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+   ========================================================= */
+
+.mp-product-info {
+  width: 100%;
+
+  margin-top: 0;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+   ========================================================= */
+
+#mp-product-title {
+  margin: 0 auto 9px;
+
+  max-width: 460px;
+
+  font-size: 22px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   PRODUCT DESCRIPTION
+   ========================================================= */
+
+#mp-product-description {
+  margin: 0 auto;
+
+  max-width: 455px;
+
+  font-size: 17px;
+
+  line-height: 1.38;
+
+  font-weight: 400;
+
+  color: #f1f1f1;
+}
+
+
+/* =========================================================
+   CTA WRAPPER
+   ========================================================= */
+
+.mp-cta-wrapper {
+  width: 100%;
+
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.mp-cta-button {
+  display: flex;
+
+  width: 100%;
+
+  min-height: 54px;
+
+  box-sizing: border-box;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #197477;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.mp-cta-button:hover {
+  filter: brightness(1.12);
+
+  transform: translateY(-1px);
+}
+
+.mp-cta-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   DISCLOSURE
+   ========================================================= */
+
+.mp-disclosure {
+  margin-top: 8px;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+
+  color: #9ca9bd;
+}
+
+.mp-disclosure span {
+  color: #00eaff;
+
+  font-weight: 800;
+}
+
+.mp-disclosure a {
+  color: #00eaff;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   SHARE OVERLAY
+   ========================================================= */
+
+.mp-share-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  backdrop-filter: blur(5px);
+}
+
+.mp-share-overlay.is-open {
+  display: flex;
+}
+
+
+/* =========================================================
+   SHARE MODAL
+   ========================================================= */
+
+.mp-share-modal {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 380px;
+
+  box-sizing: border-box;
+
+  padding: 28px 24px 24px;
+
+  border-radius: 22px;
+
+  background: #111c30;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SHARE CLOSE BUTTON
+   ========================================================= */
+
+.mp-share-close {
+  position: absolute;
+
+  right: 13px;
+  top: 9px;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SHARE TITLE
+   ========================================================= */
+
+.mp-share-modal h2 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   SHARE DESCRIPTION
+   ========================================================= */
+
+.mp-share-modal p {
+  margin: 0 0 20px;
+
+  color: #cbd4e3;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SHARE ACTIONS
+   ========================================================= */
+
+.mp-share-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
   gap: 10px;
 }
-#nav button {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(0,242,254,.6);
-  background: rgba(8,12,20,.9);
-  color: #00f2fe;
-  font-size: .8rem;
-  cursor: pointer;
-}
-#nav button:hover { border-color: #00ff87; }
 
-#counter {
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 11;
-  font-size: .7rem;
-  opacity: 0;
-}
 
-/* Ürün Paylaşım ve Kopyalama Butonları Grubu */
-.card-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-}
+/* =========================================================
+   SHARE ACTION BUTTON
+   ========================================================= */
 
-/* Ortak Buton Stilleri */
-.action-btn {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+.mp-share-action {
+  min-height: 48px;
+
   padding: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 500;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: #197477;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
   cursor: pointer;
-  transition: all 0.2s ease;
-  text-decoration: none;
+
+  transition: filter 0.2s ease;
 }
 
-.action-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-/* WhatsApp Butonu Özel Rengi (Hover) */
-.btn-whatsapp:hover {
-  background: rgba(37, 211, 102, 0.2);
-  border-color: #25d366;
-  color: #25d366;
-}
-
-/* Kopyala Butonu Özel Rengi (Hover) */
-.btn-copy:hover {
-  background: rgba(0, 242, 254, 0.15);
-  border-color: #00f2fe;
-  color: #00f2fe;
+.mp-share-action:hover {
+  filter: brightness(1.12);
 }
 
 
+/* =========================================================
+   COPY STATUS
+   ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
-  #feed { scroll-behavior: auto; }
+.mp-copy-status {
+  min-height: 20px;
+
+  margin-top: 13px;
+
+  font-size: 13px;
+
+  color: #00eaff;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  #mirzala-premium-app {
+    padding: 12px 7px;
+  }
+
+  .mp-card {
+    min-height: calc(100vh - 24px);
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    border-radius: 32px;
+  }
+
+  #mp-image-link {
+    min-height: 285px;
+  }
+
+  #mp-product-image {
+    max-height: 285px;
+  }
+
+  #mp-product-title {
+    font-size: 21px;
+  }
+
+  #mp-product-description {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .mp-card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  #mp-product-description {
+    font-size: 15px;
+  }
+
+  .mp-logo {
+    font-size: 19px;
+  }
+
+  .mp-sponsored {
+    font-size: 12px;
+  }
+
 }
