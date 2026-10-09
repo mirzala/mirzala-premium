@@ -1,77 +1,148 @@
 /* =========================================================
    MIRZALA PREMIUM
-   GLOBAL
+   FULLSCREEN LAYOUT
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
    ========================================================= */
 
 html,
 body {
+  width: 100%;
+  height: 100%;
+
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100%;
-}
 
-body {
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+
+  background: #0d1729;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 
 /* =========================================================
-   APP WRAPPER
+   BODY
+   ========================================================= */
+
+body {
+  width: 100vw;
+  height: 100dvh;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+
+/* =========================================================
+   MAIN APP
    ========================================================= */
 
 #mirzala-premium-app {
-  width: 100%;
-  min-height: 100vh;
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100dvh;
+
+  min-width: 0;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
   box-sizing: border-box;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  overflow: hidden;
 
-  padding: 14px 7px;
-
-  background: #ffffff;
+  background: #0d1729;
 }
 
 
 /* =========================================================
-   MAIN CARD WRAPPER
+   MAIN PREMIUM CARD
    ========================================================= */
 
 .mp-card {
   position: relative;
 
   width: 100%;
-  max-width: 520px;
+  height: 100%;
 
-  min-height: calc(100vh - 28px);
+  min-width: 0;
+  min-height: 0;
 
   box-sizing: border-box;
 
-  overflow: hidden;
+  display: grid;
 
-  border-radius: 34px;
+  grid-template-rows:
+    auto
+    minmax(0, 1fr)
+    auto;
+
+  overflow: hidden;
 
   background:
     radial-gradient(
       circle at 50% 8%,
-      rgba(45, 63, 93, 0.35),
-      transparent 24%
+      rgba(55, 75, 110, 0.30),
+      transparent 25%
     ),
     #0d1729;
 
   color: #ffffff;
 
-  padding: 18px 30px 14px;
 
-  border: 3px solid transparent;
+  /* ================================================
+     FOUR DIFFERENT BORDER COLORS
+     ================================================ */
 
-  box-shadow:
-    0 0 0 2px #00e5ff,
-    0 0 0 4px #6d00ff,
-    0 0 0 6px #00e5a8;
+  border-top: 4px solid #00eaff;
+
+  border-right: 4px solid #00e66f;
+
+  border-bottom: 4px solid #ff008c;
+
+  border-left: 4px solid #7200ff;
+
+
+  border-radius: 34px;
+
+  padding:
+    0
+    28px
+    0
+    28px;
+}
+
+
+/* =========================================================
+   TOP AREA
+   Header + Image + Controls
+   ========================================================= */
+
+.mp-top-area {
+  width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  flex-shrink: 0;
 }
 
 
@@ -83,11 +154,20 @@ body {
   position: relative;
 
   width: 100%;
-  height: 52px;
+
+  height: 58px;
+
+  min-height: 58px;
+
+  box-sizing: border-box;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
+  flex-shrink: 0;
 }
 
 
@@ -99,32 +179,51 @@ body {
   position: absolute;
 
   left: 0;
-  top: 0;
+  top: 9px;
 
   width: 42px;
   height: 42px;
 
+  padding: 0;
+
   border-radius: 50%;
 
-  border: 1px solid rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(255,255,255,0.20);
 
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0,0,0,0.12);
 
   color: #00eaff;
-
-  font-size: 24px;
 
   cursor: pointer;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .mp-home-button:hover {
   transform: scale(1.05);
+
+  background: rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   HOME ICON
+   ========================================================= */
+
+.mp-home-icon {
+  font-size: 25px;
+
+  line-height: 1;
+
+  transform: translateY(-1px);
 }
 
 
@@ -142,7 +241,7 @@ body {
   color: #ffffff;
 
   text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.25);
+    0 0 8px rgba(255,255,255,0.25);
 }
 
 
@@ -154,9 +253,12 @@ body {
   position: absolute;
 
   right: 0;
-  top: 12px;
+
+  top: 21px;
 
   font-size: 14px;
+
+  line-height: 1;
 
   font-weight: 700;
 
@@ -165,17 +267,21 @@ body {
 
 
 /* =========================================================
-   IMAGE WRAPPER
+   IMAGE AREA
    ========================================================= */
 
-.mp-image-wrapper {
+.mp-image-area {
   width: 100%;
 
+  min-width: 0;
+
   display: flex;
-  justify-content: center;
+
   align-items: center;
 
-  margin-top: 1px;
+  justify-content: center;
+
+  flex-shrink: 0;
 }
 
 
@@ -184,14 +290,18 @@ body {
    ========================================================= */
 
 #mp-image-link {
+  width: min(300px, 72vw);
+
+  height: min(300px, 32dvh);
+
+  min-height: 180px;
+
+  box-sizing: border-box;
+
   display: flex;
 
-  width: 100%;
-  max-width: 300px;
-
-  min-height: 300px;
-
   align-items: center;
+
   justify-content: center;
 
   background: #ffffff;
@@ -215,7 +325,7 @@ body {
   height: auto;
 
   max-width: 100%;
-  max-height: 300px;
+  max-height: 100%;
 
   object-fit: contain;
 
@@ -224,11 +334,17 @@ body {
 
 
 /* =========================================================
-   PRODUCT CONTROLS
+   CONTROLS
    ========================================================= */
 
 .mp-controls {
   width: 100%;
+
+  height: 72px;
+
+  min-height: 72px;
+
+  box-sizing: border-box;
 
   display: flex;
 
@@ -236,9 +352,11 @@ body {
 
   align-items: flex-end;
 
-  gap: 3px;
+  justify-content: center;
 
-  margin-top: 7px;
+  gap: 0;
+
+  flex-shrink: 0;
 }
 
 
@@ -247,8 +365,8 @@ body {
    ========================================================= */
 
 .mp-control-button {
-  width: 31px;
-  height: 31px;
+  width: 30px;
+  height: 24px;
 
   padding: 0;
 
@@ -258,7 +376,7 @@ body {
 
   color: #00eaff;
 
-  font-size: 30px;
+  font-size: 29px;
 
   line-height: 1;
 
@@ -267,6 +385,7 @@ body {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   transition:
@@ -284,7 +403,7 @@ body {
 
 
 /* =========================================================
-   SHARE BUTTON
+   SHARE
    ========================================================= */
 
 .mp-share-button {
@@ -295,15 +414,57 @@ body {
 
 
 /* =========================================================
+   MIDDLE FLEXIBLE AREA
+   ========================================================= */
+
+.mp-middle-area {
+  width: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  scrollbar-width: thin;
+}
+
+
+/* =========================================================
    PRODUCT INFORMATION
    ========================================================= */
 
 .mp-product-info {
   width: 100%;
 
-  margin-top: 0;
+  max-width: 700px;
+
+  box-sizing: border-box;
+
+  padding:
+    10px
+    0
+    10px;
+
+  margin: auto;
 
   text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 
@@ -312,15 +473,19 @@ body {
    ========================================================= */
 
 #mp-product-title {
-  margin: 0 auto 9px;
+  width: 100%;
 
-  max-width: 460px;
+  margin: 0 0 10px;
 
-  font-size: 22px;
+  padding: 0;
+
+  font-size: clamp(20px, 2.2vw, 27px);
 
   line-height: 1.25;
 
   font-weight: 800;
+
+  text-align: center;
 
   color: #ffffff;
 }
@@ -331,17 +496,39 @@ body {
    ========================================================= */
 
 #mp-product-description {
-  margin: 0 auto;
+  width: 100%;
 
-  max-width: 455px;
+  margin: 0;
 
-  font-size: 17px;
+  padding: 0;
 
-  line-height: 1.38;
+  font-size: clamp(15px, 1.6vw, 18px);
+
+  line-height: 1.42;
 
   font-weight: 400;
 
+  text-align: center;
+
   color: #f1f1f1;
+}
+
+
+/* =========================================================
+   BOTTOM AREA
+   CTA + DISCLOSURE
+   ========================================================= */
+
+.mp-bottom-area {
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  padding-bottom: 8px;
 }
 
 
@@ -352,31 +539,32 @@ body {
 .mp-cta-wrapper {
   width: 100%;
 
-  margin-top: 24px;
+  margin: 0;
 }
 
 
 /* =========================================================
-   CTA BUTTON
+   CTA
    ========================================================= */
 
 .mp-cta-button {
-  display: flex;
-
   width: 100%;
 
   min-height: 54px;
 
   box-sizing: border-box;
 
+  display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 15px;
 
   background: #197477;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255,255,255,0.18);
 
   color: #ffffff;
 
@@ -384,11 +572,13 @@ body {
 
   font-size: 18px;
 
+  line-height: 1;
+
   font-weight: 800;
 
   transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
+    filter 0.2s ease,
+    transform 0.2s ease;
 }
 
 .mp-cta-button:hover {
@@ -407,13 +597,15 @@ body {
    ========================================================= */
 
 .mp-disclosure {
-  margin-top: 8px;
+  width: 100%;
+
+  margin-top: 6px;
 
   text-align: center;
 
   font-size: 10px;
 
-  line-height: 1.55;
+  line-height: 1.45;
 
   color: #9ca9bd;
 }
@@ -447,13 +639,14 @@ body {
   display: none;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 20px;
 
   box-sizing: border-box;
 
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0,0,0,0.72);
 
   backdrop-filter: blur(5px);
 }
@@ -482,17 +675,17 @@ body {
 
   background: #111c30;
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,0.15);
 
   box-shadow:
-    0 20px 70px rgba(0, 0, 0, 0.5);
+    0 20px 70px rgba(0,0,0,0.5);
 
   text-align: center;
 }
 
 
 /* =========================================================
-   SHARE CLOSE BUTTON
+   SHARE CLOSE
    ========================================================= */
 
 .mp-share-close {
@@ -536,7 +729,7 @@ body {
 
 
 /* =========================================================
-   SHARE DESCRIPTION
+   SHARE TEXT
    ========================================================= */
 
 .mp-share-modal p {
@@ -564,7 +757,7 @@ body {
 
 
 /* =========================================================
-   SHARE ACTION BUTTON
+   SHARE ACTION
    ========================================================= */
 
 .mp-share-action {
@@ -610,38 +803,116 @@ body {
 
 
 /* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .mp-card {
+    padding-left: 22px;
+
+    padding-right: 22px;
+
+    border-radius: 28px;
+  }
+
+  #mp-image-link {
+    width: min(300px, 72vw);
+
+    height: min(300px, 31dvh);
+  }
+
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 480px) {
 
-  #mirzala-premium-app {
-    padding: 12px 7px;
-  }
-
   .mp-card {
-    min-height: calc(100vh - 24px);
+    padding-left: 16px;
 
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 16px;
 
-    border-radius: 32px;
+    border-radius: 24px;
   }
+
+
+  .mp-header {
+    height: 54px;
+
+    min-height: 54px;
+  }
+
+
+  .mp-home-button {
+    width: 40px;
+    height: 40px;
+
+    top: 7px;
+  }
+
+
+  .mp-logo {
+    font-size: 20px;
+  }
+
+
+  .mp-sponsored {
+    top: 20px;
+
+    font-size: 13px;
+  }
+
 
   #mp-image-link {
-    min-height: 285px;
+    width: min(300px, 76vw);
+
+    height: min(300px, 31dvh);
+
+    min-height: 170px;
   }
 
-  #mp-product-image {
-    max-height: 285px;
+
+  .mp-controls {
+    height: 62px;
+
+    min-height: 62px;
   }
+
+
+  .mp-product-info {
+    padding-top: 6px;
+
+    padding-bottom: 6px;
+  }
+
 
   #mp-product-title {
     font-size: 21px;
+
+    line-height: 1.23;
   }
+
 
   #mp-product-description {
     font-size: 16px;
+
+    line-height: 1.4;
+  }
+
+
+  .mp-cta-button {
+    min-height: 53px;
+
+    font-size: 17px;
+  }
+
+
+  .mp-disclosure {
+    font-size: 9px;
   }
 
 }
@@ -654,20 +925,54 @@ body {
 @media (max-width: 360px) {
 
   .mp-card {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 12px;
+
+    padding-right: 12px;
   }
 
-  #mp-product-description {
-    font-size: 15px;
-  }
 
   .mp-logo {
+    font-size: 18px;
+  }
+
+
+  .mp-sponsored {
+    font-size: 11px;
+  }
+
+
+  #mp-image-link {
+    width: 74vw;
+
+    height: 27dvh;
+
+    min-height: 155px;
+  }
+
+
+  .mp-controls {
+    height: 56px;
+
+    min-height: 56px;
+  }
+
+
+  #mp-product-title {
     font-size: 19px;
   }
 
-  .mp-sponsored {
-    font-size: 12px;
+
+  #mp-product-description {
+    font-size: 15px;
+
+    line-height: 1.37;
+  }
+
+
+  .mp-cta-button {
+    min-height: 50px;
+
+    font-size: 16px;
   }
 
 }
