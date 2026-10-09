@@ -266,17 +266,18 @@ body {
    ========================================================= */
 
 .mp-middle-area {
-  flex: 1 1 0;
-  width: 100%;
-  min-width: 0;
+  flex: 1 1 auto;
   min-height: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
   overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* iOS için akıcı dokunmatik kaydırma */
+  touch-action: pan-y;               /* Sadece dikey kaydırma hareketine izin ver */
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   scrollbar-width: thin;
+  padding: 10px 0;
 }
 
 .mp-product-info {
