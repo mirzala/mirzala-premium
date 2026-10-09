@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
   >
 
   <meta
@@ -23,174 +24,209 @@
 
 </head>
 
+
 <body>
 
-  <!-- ==================================================
-       MIRZALA PREMIUM APP WRAPPER
-       ================================================== -->
+  <!-- =====================================================
+       MIRZALA PREMIUM APP
+       ===================================================== -->
 
   <main id="mirzala-premium-app">
 
-    <!-- ==================================================
-         MAIN CARD WRAPPER
-         ================================================== -->
+
+    <!-- ===================================================
+         PREMIUM CARD WRAPPER
+         =================================================== -->
 
     <section class="mp-card">
 
-      <!-- ==================================================
-           HEADER WRAPPER
-           ================================================== -->
 
-      <header class="mp-header">
+      <!-- =================================================
+           TOP AREA WRAPPER
+           Header + Image + Controls
+           ================================================= -->
 
-        <button
-          type="button"
-          class="mp-home-button"
-          id="mp-home-button"
-          aria-label="Go to Mirzala home"
-        >
-          <span>⌂</span>
-        </button>
-
-        <div class="mp-logo">
-          mirzala
-        </div>
-
-        <div class="mp-sponsored">
-          Sponsored
-        </div>
-
-      </header>
+      <div class="mp-top-area">
 
 
-      <!-- ==================================================
-           PRODUCT IMAGE WRAPPER
-           ================================================== -->
+        <!-- ===============================================
+             HEADER
+             =============================================== -->
 
-      <div class="mp-image-wrapper">
+        <header class="mp-header">
 
-        <a
-          href="#"
-          id="mp-image-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          <img
-            id="mp-product-image"
-            src=""
-            alt=""
+          <button
+            type="button"
+            class="mp-home-button"
+            id="mp-home-button"
+            aria-label="Go to Mirzala home"
           >
-
-        </a>
-
-      </div>
+            <span class="mp-home-icon">⌂</span>
+          </button>
 
 
-      <!-- ==================================================
-           PRODUCT CONTROLS WRAPPER
-           ================================================== -->
-
-      <div class="mp-controls">
-
-        <button
-          type="button"
-          id="mp-next-button"
-          class="mp-control-button"
-          aria-label="Next product"
-        >
-          <span>⌃</span>
-        </button>
+          <div class="mp-logo">
+            mirzala
+          </div>
 
 
-        <button
-          type="button"
-          id="mp-share-button"
-          class="mp-control-button mp-share-button"
-          aria-label="Share product"
-        >
-          <span>↗</span>
-        </button>
+          <div class="mp-sponsored">
+            Sponsored
+          </div>
+
+        </header>
 
 
-        <button
-          type="button"
-          id="mp-prev-button"
-          class="mp-control-button"
-          aria-label="Previous product"
-        >
-          <span>⌄</span>
-        </button>
+        <!-- ===============================================
+             PRODUCT IMAGE
+             =============================================== -->
 
-      </div>
+        <div class="mp-image-area">
 
-
-      <!-- ==================================================
-           PRODUCT INFORMATION WRAPPER
-           ================================================== -->
-
-      <article class="mp-product-info">
-
-        <h1 id="mp-product-title">
-          Loading...
-        </h1>
-
-        <p id="mp-product-description">
-          Loading product...
-        </p>
-
-      </article>
-
-
-      <!-- ==================================================
-           CTA WRAPPER
-           ================================================== -->
-
-      <div class="mp-cta-wrapper">
-
-        <a
-          href="#"
-          id="mp-cta-button"
-          class="mp-cta-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check It Out →
-        </a>
-
-      </div>
-
-
-      <!-- ==================================================
-           DISCLOSURE WRAPPER
-           ================================================== -->
-
-      <footer class="mp-disclosure">
-
-        <div>
-          <span>*</span>
-          mirzala is reader-supported. Featured products may include affiliate links.
-        </div>
-
-        <div>
-          See our
           <a
-            href="https://www.mirzala.com/p/affiliate-disclosure.html"
+            href="#"
+            id="mp-image-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Affiliate Disclosure
-          </a>.
+
+            <img
+              id="mp-product-image"
+              src=""
+              alt=""
+            >
+
+          </a>
+
         </div>
 
-      </footer>
+
+        <!-- ===============================================
+             PRODUCT CONTROLS
+             =============================================== -->
+
+        <div class="mp-controls">
+
+          <button
+            type="button"
+            id="mp-next-button"
+            class="mp-control-button"
+            aria-label="Next product"
+          >
+            <span>⌃</span>
+          </button>
+
+
+          <button
+            type="button"
+            id="mp-share-button"
+            class="mp-control-button mp-share-button"
+            aria-label="Share product"
+          >
+            <span>↗</span>
+          </button>
+
+
+          <button
+            type="button"
+            id="mp-prev-button"
+            class="mp-control-button"
+            aria-label="Previous product"
+          >
+            <span>⌄</span>
+          </button>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- =================================================
+           FLEXIBLE PRODUCT CONTENT
+           ================================================= -->
+
+      <div class="mp-middle-area">
+
+
+        <article class="mp-product-info">
+
+          <h1 id="mp-product-title">
+            Loading...
+          </h1>
+
+
+          <p id="mp-product-description">
+            Loading product...
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+      <!-- =================================================
+           BOTTOM AREA
+           CTA + DISCLOSURE
+           ================================================= -->
+
+      <div class="mp-bottom-area">
+
+
+        <!-- ===============================================
+             CTA
+             =============================================== -->
+
+        <div class="mp-cta-wrapper">
+
+          <a
+            href="#"
+            id="mp-cta-button"
+            class="mp-cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check It Out →
+          </a>
+
+        </div>
+
+
+        <!-- ===============================================
+             DISCLOSURE
+             =============================================== -->
+
+        <footer class="mp-disclosure">
+
+          <div>
+            <span>*</span>
+            mirzala is reader-supported. Featured products may include affiliate links.
+          </div>
+
+          <div>
+            See our
+            <a
+              href="https://www.mirzala.com/p/affiliate-disclosure.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Affiliate Disclosure
+            </a>.
+          </div>
+
+        </footer>
+
+
+      </div>
+
 
     </section>
 
 
-    <!-- ==================================================
-         SHARE MODAL WRAPPER
-         ================================================== -->
+    <!-- ===================================================
+         SHARE MODAL
+         =================================================== -->
 
     <div
       id="mp-share-overlay"
@@ -199,6 +235,7 @@
     >
 
       <div class="mp-share-modal">
+
 
         <button
           type="button"
@@ -209,9 +246,11 @@
           ×
         </button>
 
+
         <h2>
           Share this product
         </h2>
+
 
         <p>
           Share this Mirzala product with someone.
@@ -219,6 +258,7 @@
 
 
         <div class="mp-share-actions">
+
 
           <button
             type="button"
@@ -237,6 +277,7 @@
             Copy Link
           </button>
 
+
         </div>
 
 
@@ -245,9 +286,11 @@
           class="mp-copy-status"
         ></div>
 
+
       </div>
 
     </div>
+
 
   </main>
 
@@ -255,4 +298,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
