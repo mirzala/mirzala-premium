@@ -1,6 +1,6 @@
 /* =========================================================
    MIRZALA PREMIUM
-   MAIN APPLICATION
+   APPLICATION
    ========================================================= */
 
 (function () {
@@ -9,26 +9,24 @@
 
 
   /* =======================================================
-     CONFIGURATION WRAPPER
+     CONFIGURATION
      ======================================================= */
 
   const CONFIG = {
 
     DATA_URL: "./products.json",
 
-    HOME_URL: "https://www.mirzala.com/",
+    HOME_URL:
+      "https://www.mirzala.com/",
 
     GITHUB_BASE_URL:
-      "https://mirzala.github.io/mirzala-premium/",
-
-    BLOGGER_BASE_URL:
-      "https://www.mirzala.com/p/premium.html"
+      "https://mirzala.github.io/mirzala-premium/"
 
   };
 
 
   /* =======================================================
-     STATE WRAPPER
+     STATE
      ======================================================= */
 
   const STATE = {
@@ -43,64 +41,94 @@
 
 
   /* =======================================================
-     DOM WRAPPER
+     DOM
      ======================================================= */
 
   const DOM = {
 
     image:
-      document.getElementById("mp-product-image"),
+      document.getElementById(
+        "mp-product-image"
+      ),
 
     imageLink:
-      document.getElementById("mp-image-link"),
+      document.getElementById(
+        "mp-image-link"
+      ),
 
     title:
-      document.getElementById("mp-product-title"),
+      document.getElementById(
+        "mp-product-title"
+      ),
 
     description:
-      document.getElementById("mp-product-description"),
+      document.getElementById(
+        "mp-product-description"
+      ),
 
     cta:
-      document.getElementById("mp-cta-button"),
+      document.getElementById(
+        "mp-cta-button"
+      ),
 
     next:
-      document.getElementById("mp-next-button"),
+      document.getElementById(
+        "mp-next-button"
+      ),
 
     prev:
-      document.getElementById("mp-prev-button"),
+      document.getElementById(
+        "mp-prev-button"
+      ),
 
     share:
-      document.getElementById("mp-share-button"),
+      document.getElementById(
+        "mp-share-button"
+      ),
 
     home:
-      document.getElementById("mp-home-button"),
+      document.getElementById(
+        "mp-home-button"
+      ),
 
     overlay:
-      document.getElementById("mp-share-overlay"),
+      document.getElementById(
+        "mp-share-overlay"
+      ),
 
     closeShare:
-      document.getElementById("mp-share-close"),
+      document.getElementById(
+        "mp-share-close"
+      ),
 
     whatsapp:
-      document.getElementById("mp-whatsapp-button"),
+      document.getElementById(
+        "mp-whatsapp-button"
+      ),
 
     copy:
-      document.getElementById("mp-copy-button"),
+      document.getElementById(
+        "mp-copy-button"
+      ),
 
     copyStatus:
-      document.getElementById("mp-copy-status")
+      document.getElementById(
+        "mp-copy-status"
+      )
 
   };
 
 
   /* =======================================================
-     URL WRAPPER
+     GET PRODUCT ID FROM URL
      ======================================================= */
 
   function getProductIdFromUrl() {
 
     const params =
-      new URLSearchParams(window.location.search);
+      new URLSearchParams(
+        window.location.search
+      );
 
     return params.get("product");
 
@@ -116,20 +144,24 @@
     return (
       CONFIG.GITHUB_BASE_URL +
       "?product=" +
-      encodeURIComponent(productId)
+      encodeURIComponent(
+        productId
+      )
     );
 
   }
 
 
   /* =======================================================
-     UPDATE BROWSER URL
+     UPDATE URL
      ======================================================= */
 
   function updateBrowserUrl(productId) {
 
     const newUrl =
-      createProductUrl(productId);
+      createProductUrl(
+        productId
+      );
 
     window.history.replaceState(
       {},
@@ -141,26 +173,35 @@
 
 
   /* =======================================================
-     FIND PRODUCT
+     FIND PRODUCT INDEX
      ======================================================= */
 
   function findProductIndex(productId) {
 
     if (!productId) {
+
       return 0;
+
     }
+
 
     const index =
       STATE.products.findIndex(
         function (product) {
 
-          return String(product.id) ===
-            String(productId);
+          return String(
+            product.id
+          ) === String(
+            productId
+          );
 
         }
       );
 
-    return index >= 0 ? index : 0;
+
+    return index >= 0
+      ? index
+      : 0;
 
   }
 
@@ -169,87 +210,114 @@
      LOAD PRODUCT
      ======================================================= */
 
-  function loadProduct(index, updateUrl) {
+  function loadProduct(
+    index,
+    updateUrl
+  ) {
 
     if (!STATE.products.length) {
+
       return;
+
     }
+
 
     if (index < 0) {
-      index = STATE.products.length - 1;
+
+      index =
+        STATE.products.length - 1;
+
     }
 
-    if (index >= STATE.products.length) {
+
+    if (
+      index >=
+      STATE.products.length
+    ) {
+
       index = 0;
+
     }
 
-    STATE.currentIndex = index;
+
+    STATE.currentIndex =
+      index;
+
 
     const product =
       STATE.products[index];
 
-    STATE.currentProduct = product;
+
+    STATE.currentProduct =
+      product;
 
 
-    /* -----------------------------------------------
+    /* ================================================
        IMAGE
-       ----------------------------------------------- */
+       ================================================ */
 
     DOM.image.src =
       product.image || "";
 
+
     DOM.image.alt =
-      product.title || "Mirzala product";
+      product.title ||
+      "Mirzala product";
 
 
-    /* -----------------------------------------------
-       IMAGE LINK
-       ----------------------------------------------- */
+    /* ================================================
+       PRODUCT LINK
+       ================================================ */
 
     DOM.imageLink.href =
       product.productUrl || "#";
 
 
-    /* -----------------------------------------------
+    /* ================================================
        TITLE
-       ----------------------------------------------- */
+       ================================================ */
 
     DOM.title.textContent =
       product.title || "";
 
 
-    /* -----------------------------------------------
+    /* ================================================
        DESCRIPTION
-       ----------------------------------------------- */
+       ================================================ */
 
     DOM.description.textContent =
       product.description || "";
 
 
-    /* -----------------------------------------------
+    /* ================================================
        CTA
-       ----------------------------------------------- */
+       ================================================ */
 
     DOM.cta.href =
       product.productUrl || "#";
 
 
-    /* -----------------------------------------------
+    /* ================================================
        URL
-       ----------------------------------------------- */
+       ================================================ */
 
-    if (updateUrl !== false) {
+    if (
+      updateUrl !== false
+    ) {
 
-      updateBrowserUrl(product.id);
+      updateBrowserUrl(
+        product.id
+      );
 
     }
 
 
-    /* -----------------------------------------------
-       RESET SHARE STATUS
-       ----------------------------------------------- */
+    /* ================================================
+       COPY STATUS
+       ================================================ */
 
-    DOM.copyStatus.textContent = "";
+    DOM.copyStatus.textContent =
+      "";
 
   }
 
@@ -260,17 +328,24 @@
 
   function nextProduct() {
 
-    let nextIndex =
+    let index =
       STATE.currentIndex + 1;
 
+
     if (
-      nextIndex >=
+      index >=
       STATE.products.length
     ) {
-      nextIndex = 0;
+
+      index = 0;
+
     }
 
-    loadProduct(nextIndex, true);
+
+    loadProduct(
+      index,
+      true
+    );
 
   }
 
@@ -281,32 +356,45 @@
 
   function previousProduct() {
 
-    let previousIndex =
+    let index =
       STATE.currentIndex - 1;
 
-    if (previousIndex < 0) {
 
-      previousIndex =
+    if (index < 0) {
+
+      index =
         STATE.products.length - 1;
 
     }
 
-    loadProduct(previousIndex, true);
+
+    loadProduct(
+      index,
+      true
+    );
 
   }
 
 
   /* =======================================================
-     SHARE MODAL OPEN
+     OPEN SHARE
      ======================================================= */
 
   function openShareModal() {
 
-    if (!STATE.currentProduct) {
+    if (
+      !STATE.currentProduct
+    ) {
+
       return;
+
     }
 
-    DOM.overlay.classList.add("is-open");
+
+    DOM.overlay.classList.add(
+      "is-open"
+    );
+
 
     DOM.overlay.setAttribute(
       "aria-hidden",
@@ -317,12 +405,15 @@
 
 
   /* =======================================================
-     SHARE MODAL CLOSE
+     CLOSE SHARE
      ======================================================= */
 
   function closeShareModal() {
 
-    DOM.overlay.classList.remove("is-open");
+    DOM.overlay.classList.remove(
+      "is-open"
+    );
+
 
     DOM.overlay.setAttribute(
       "aria-hidden",
@@ -338,9 +429,14 @@
 
   function getShareUrl() {
 
-    if (!STATE.currentProduct) {
+    if (
+      !STATE.currentProduct
+    ) {
+
       return CONFIG.GITHUB_BASE_URL;
+
     }
+
 
     return createProductUrl(
       STATE.currentProduct.id
@@ -350,20 +446,27 @@
 
 
   /* =======================================================
-     WHATSAPP SHARE
+     WHATSAPP
      ======================================================= */
 
   function shareToWhatsApp() {
 
-    if (!STATE.currentProduct) {
+    if (
+      !STATE.currentProduct
+    ) {
+
       return;
+
     }
+
 
     const product =
       STATE.currentProduct;
 
+
     const shareUrl =
       getShareUrl();
+
 
     const message =
       "Check this product on Mirzala:\n\n" +
@@ -371,9 +474,13 @@
       "\n\n" +
       shareUrl;
 
+
     const whatsappUrl =
       "https://wa.me/?text=" +
-      encodeURIComponent(message);
+      encodeURIComponent(
+        message
+      );
+
 
     window.open(
       whatsappUrl,
@@ -393,34 +500,45 @@
     const shareUrl =
       getShareUrl();
 
+
     try {
 
       await navigator.clipboard.writeText(
         shareUrl
       );
 
+
       DOM.copyStatus.textContent =
         "Link copied!";
+
 
     } catch (error) {
 
       const temporary =
-        document.createElement("textarea");
+        document.createElement(
+          "textarea"
+        );
+
 
       temporary.value =
         shareUrl;
+
 
       document.body.appendChild(
         temporary
       );
 
+
       temporary.select();
+
 
       document.execCommand(
         "copy"
       );
 
+
       temporary.remove();
+
 
       DOM.copyStatus.textContent =
         "Link copied!";
@@ -461,6 +579,7 @@
           }
         );
 
+
       if (!response.ok) {
 
         throw new Error(
@@ -469,13 +588,16 @@
 
       }
 
+
       const data =
         await response.json();
 
 
       if (
         !data ||
-        !Array.isArray(data.products)
+        !Array.isArray(
+          data.products
+        )
       ) {
 
         throw new Error(
@@ -489,7 +611,9 @@
         data.products;
 
 
-      if (!STATE.products.length) {
+      if (
+        !STATE.products.length
+      ) {
 
         throw new Error(
           "No products found."
@@ -497,10 +621,6 @@
 
       }
 
-
-      /* -----------------------------------------------
-         URL PRODUCT
-         ----------------------------------------------- */
 
       const requestedId =
         getProductIdFromUrl();
@@ -525,8 +645,10 @@
         error
       );
 
+
       DOM.title.textContent =
         "Product unavailable";
+
 
       DOM.description.textContent =
         "The product data could not be loaded.";
@@ -541,6 +663,7 @@
      ======================================================= */
 
   function bindEvents() {
+
 
     DOM.next.addEventListener(
       "click",
@@ -605,19 +728,30 @@
       "keydown",
       function (event) {
 
-        if (event.key === "Escape") {
+        if (
+          event.key ===
+          "Escape"
+        ) {
 
           closeShareModal();
 
         }
 
-        if (event.key === "ArrowUp") {
+
+        if (
+          event.key ===
+          "ArrowUp"
+        ) {
 
           nextProduct();
 
         }
 
-        if (event.key === "ArrowDown") {
+
+        if (
+          event.key ===
+          "ArrowDown"
+        ) {
 
           previousProduct();
 
@@ -630,7 +764,7 @@
 
 
   /* =======================================================
-     INITIALIZE
+     INIT
      ======================================================= */
 
   function init() {
