@@ -223,8 +223,6 @@ body {
   border: 0;
   background: transparent;
   color: #00eaff;
-  font-size: 34px;
-  line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -232,14 +230,24 @@ body {
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
+.mp-control-button svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .mp-control-button span {
   display: inline-block;
   line-height: 1;
-  transform: translateY(1px);
 }
 
 .mp-control-button:hover {
-  transform: scale(1.15);
+  transform: scale(1.10);
 }
 
 .mp-control-button:active {
