@@ -215,9 +215,7 @@ body {
   gap: 12px;
   z-index: 100;
 }
-.mp-control-button:not(.mp-share-button) {
-  font-size: 34px;
-}
+
 .mp-control-button {
   width: 30px;
   height: 30px;
@@ -225,13 +223,19 @@ body {
   border: 0;
   background: transparent;
   color: #00eaff;
-  font-size: 29px;
+  font-size: 34px;
   line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.mp-control-button span {
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(1px);
 }
 
 .mp-control-button:hover {
@@ -245,6 +249,10 @@ body {
 .mp-share-button {
   color: #ffffff;
   font-size: 21px;
+}
+
+.mp-share-button span {
+  transform: none;
 }
 
 /* =========================================================
