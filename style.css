@@ -3,7 +3,6 @@
    FULLSCREEN LAYOUT
    ========================================================= */
 
-
 /* =========================================================
    GLOBAL RESET
    ========================================================= */
@@ -12,33 +11,19 @@ html,
 body {
   width: 100%;
   height: 100%;
-
   margin: 0;
   padding: 0;
-
   overflow: hidden;
-
   background: #0d1729;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-
-/* =========================================================
-   BODY
-   ========================================================= */
 
 body {
   width: 100vw;
   height: 100dvh;
-
   min-width: 0;
   min-height: 0;
 }
-
 
 /* =========================================================
    MAIN APP
@@ -46,29 +31,20 @@ body {
 
 #mirzala-premium-app {
   position: fixed;
-
   inset: 0;
-
   width: 100vw;
   height: 100dvh;
-
   min-width: 0;
   min-height: 0;
-
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
-
   overflow: hidden;
-
   background: #0d1729;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 /* =========================================================
    MAIN PREMIUM CARD
@@ -76,64 +52,34 @@ body {
 
 .mp-card {
   position: relative;
-
   width: auto;
   height: 100%;
   aspect-ratio: 9 / 16;
   max-width: 100vw;
   max-height: 100dvh;
-
   min-width: 0;
   min-height: 0;
-
   box-sizing: border-box;
-
   display: grid;
-
-  grid-template-rows:
-    auto
-    minmax(0, 1fr)
-    auto;
-
+  grid-template-rows: auto minmax(0, 1fr) auto;
   overflow: hidden;
-
-  background:
-    radial-gradient(
+  background: radial-gradient(
       circle at 50% 8%,
       rgba(55, 75, 110, 0.30),
       transparent 25%
     ),
     #0d1729;
-
   color: #ffffff;
-
-
-  /* ================================================
-     FOUR DIFFERENT BORDER COLORS
-     ================================================ */
-
   border-top: 4px solid #00eaff;
-
   border-right: 4px solid #00e66f;
-
   border-bottom: 4px solid #ff008c;
-
   border-left: 4px solid #7200ff;
-
-
   border-radius: 34px;
-
-  padding:
-    0
-    28px
-    0
-    28px;
+  padding: 0 28px 0 28px;
 }
-
 
 /* =========================================================
    TOP AREA
-   Header + Image + Controls
    ========================================================= */
 
 .mp-top-area {
@@ -147,31 +93,21 @@ body {
   flex-shrink: 0;
 }
 
-
 /* =========================================================
    HEADER
    ========================================================= */
 
 .mp-header {
   position: relative;
-
   width: 100%;
-
   height: 58px;
-
   min-height: 58px;
-
   box-sizing: border-box;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   flex-shrink: 0;
 }
-
 
 /* =========================================================
    HOME BUTTON
@@ -179,211 +115,99 @@ body {
 
 .mp-home-button {
   position: absolute;
-
   left: 0;
   top: 9px;
-
   width: 42px;
   height: 42px;
-
   padding: 0;
-
   border-radius: 50%;
-
   border: 1px solid rgba(255,255,255,0.20);
-
   background: rgba(0,0,0,0.12);
-
   color: #00eaff;
-
   cursor: pointer;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .mp-home-button:hover {
   transform: scale(1.05);
-
   background: rgba(0,0,0,0.25);
 }
 
-
-/* =========================================================
-   HOME ICON
-   ========================================================= */
-
 .mp-home-icon {
   font-size: 25px;
-
   line-height: 1;
-
   transform: translateY(-1px);
 }
 
-
 /* =========================================================
-   LOGO
+   LOGO & SPONSORED
    ========================================================= */
 
 .mp-logo {
   font-size: 14.7px;
-
   font-weight: 800;
-
   letter-spacing: 2px;
-
   color: #ffffff;
-
-  text-shadow:
-    0 0 8px rgba(255,255,255,0.25);
+  text-shadow: 0 0 8px rgba(255,255,255,0.25);
 }
-
-
-/* =========================================================
-   SPONSORED
-   ========================================================= */
 
 .mp-sponsored {
   position: absolute;
-   
   right: 0;
-   
   top: 21px;
-   
   font-size: 14.7px;
-   
   line-height: 1;
-   
   font-weight: 500;
-   
   opacity: 0.6;
-   
   color: #eeeeee;
 }
 
-
 /* =========================================================
-   IMAGE AREA
+   IMAGE AREA & LINK (Şeffaf ve Çerçevesiz)
    ========================================================= */
 
 .mp-image-area {
   width: 100%;
-
   min-width: 0;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   flex-shrink: 0;
 }
 
-
-/* =========================================================
-   IMAGE LINK
-   ========================================================= */
-
 #mp-image-link {
   width: min(300px, 72vw);
-
   height: min(300px, 32dvh);
-
   min-height: 180px;
-
   box-sizing: border-box;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  background: #ffffff;
-
+  background: transparent;
   border-radius: 16px;
-
   overflow: hidden;
-
   text-decoration: none;
 }
 
-
-/* =========================================================
-   PRODUCT IMAGE
-   ========================================================= */
-
 #mp-product-image {
-
   display: block;
-
-
-
-  width: auto;
-
-  height: auto;
-
-
-
-  max-width: 100%;
-
-  max-height: 100%;
-
-
-
-  object-fit: contain;
-
-
-
-  background: #ffffff;
-
-  overflow-y: auto;
-
-
-
-  overflow-x: hidden;
-
-
-
-  display: flex;
-
-
-
-  align-items: center;
-
-
-
-  justify-content: center;
-
-
-
-  box-sizing: border-box;
-
-
-
-  scrollbar-width: thin;
-
-
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  background: transparent;
 }
 
-
 /* =========================================================
-   CONTROLS
+   CONTROLS (Sağa Sabitlenmiş)
    ========================================================= */
 
 .mp-controls {
   position: absolute;
-  right: 8px;
+  right: 4px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -393,37 +217,20 @@ body {
   z-index: 100;
 }
 
-/* =========================================================
-   CONTROL BUTTON
-   ========================================================= */
-
 .mp-control-button {
   width: 30px;
   height: 24px;
-
   padding: 0;
-
   border: 0;
-
   background: transparent;
-
   color: #00eaff;
-
   font-size: 29px;
-
   line-height: 1;
-
   cursor: pointer;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  transition:
-    transform 0.18s ease,
-    opacity 0.18s ease;
+  transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .mp-control-button:hover {
@@ -434,252 +241,137 @@ body {
   transform: scale(0.95);
 }
 
-
-/* =========================================================
-   SHARE
-   ========================================================= */
-
 .mp-share-button {
   color: #ffffff;
-
   font-size: 21px;
 }
 
-
 /* =========================================================
-   MIDDLE FLEXIBLE AREA
+   MIDDLE FLEXIBLE AREA & INFO
    ========================================================= */
 
 .mp-middle-area {
   width: 100%;
-
   min-width: 0;
   min-height: 0;
-
   overflow-y: auto;
   overflow-x: hidden;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   box-sizing: border-box;
-
   scrollbar-width: thin;
 }
 
-/* =========================================================
-   PRODUCT INFORMATION
-   ========================================================= */
-
 .mp-product-info {
   width: 100%;
-
   max-width: 700px;
-
   box-sizing: border-box;
-
-  padding:
-    10px
-    0
-    10px;
-
+  padding: 10px 0 10px;
   margin: auto;
-
   text-align: center;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
 }
 
-
-/* =========================================================
-   PRODUCT TITLE
-   ========================================================= */
-
 #mp-product-title {
   width: 100%;
-
   margin: 0 0 10px;
-
   padding: 0;
-
   font-size: clamp(16px, 1.8vw, 20px);
-
   line-height: 1.25;
-
   font-weight: 800;
-
   text-align: center;
-
   color: #ffffff;
 }
 
-
-/* =========================================================
-   PRODUCT DESCRIPTION
-   ========================================================= */
-
 #mp-product-description {
   width: 100%;
-
   margin: 0;
-
   padding: 0;
-
   font-size: clamp(13px, 1.4vw, 16px);
-
   line-height: 1.42;
-
   font-weight: 400;
-
   text-align: center;
-
   color: #f1f1f1;
 }
 
-
 /* =========================================================
-   BOTTOM AREA
-   CTA + DISCLOSURE
+   BOTTOM AREA & CTA
    ========================================================= */
 
 .mp-bottom-area {
   width: 100%;
-
   min-width: 0;
-
   box-sizing: border-box;
-
   flex-shrink: 0;
-
   padding-bottom: 8px;
 }
 
-
-/* =========================================================
-   CTA WRAPPER
-   ========================================================= */
-
 .mp-cta-wrapper {
   width: 100%;
-
   margin: 0;
 }
 
-
-/* =========================================================
-   CTA
-   ========================================================= */
-
 .mp-cta-button {
   width: 100%;
-
   min-height: 54px;
-
   box-sizing: border-box;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border-radius: 15px;
-
   background: #197477;
-
   border: 1px solid rgba(255,255,255,0.18);
-
   color: #ffffff;
-
   text-decoration: none;
-
   font-size: 18px;
-
   line-height: 1;
-
   font-weight: 800;
-
-  transition:
-    filter 0.2s ease,
-    transform 0.2s ease;
+  transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 .mp-cta-button:hover {
   filter: brightness(1.12);
-
   transform: translateY(-1px);
 }
 
-.mp-cta-button:active {
-  transform: translateY(0);
-}
-
-
-/* =========================================================
-   DISCLOSURE
-   ========================================================= */
-
 .mp-disclosure {
   width: 100%;
-
   margin-top: 6px;
-
   text-align: center;
-
   font-size: 10px;
-
   line-height: 1.45;
-
   color: #9ca9bd;
 }
 
 .mp-disclosure span {
   color: #00eaff;
-
   font-weight: 800;
 }
 
 .mp-disclosure a {
   color: #00eaff;
-
   font-weight: 700;
-
   text-decoration: underline;
 }
 
-
 /* =========================================================
-   SHARE OVERLAY
+   SHARE OVERLAY & MODAL
    ========================================================= */
 
 .mp-share-overlay {
   position: fixed;
-
   inset: 0;
-
   z-index: 9999;
-
   display: none;
-
   align-items: center;
-
   justify-content: center;
-
   padding: 20px;
-
   box-sizing: border-box;
-
   background: rgba(0,0,0,0.72);
-
   backdrop-filter: blur(5px);
 }
 
@@ -687,130 +379,64 @@ body {
   display: flex;
 }
 
-
-/* =========================================================
-   SHARE MODAL
-   ========================================================= */
-
 .mp-share-modal {
   position: relative;
-
   width: 100%;
-
   max-width: 380px;
-
   box-sizing: border-box;
-
   padding: 28px 24px 24px;
-
   border-radius: 22px;
-
   background: #111c30;
-
   border: 1px solid rgba(255,255,255,0.15);
-
-  box-shadow:
-    0 20px 70px rgba(0,0,0,0.5);
-
+  box-shadow: 0 20px 70px rgba(0,0,0,0.5);
   text-align: center;
 }
 
-
-/* =========================================================
-   SHARE CLOSE
-   ========================================================= */
-
 .mp-share-close {
   position: absolute;
-
   right: 13px;
   top: 9px;
-
   width: 34px;
   height: 34px;
-
   padding: 0;
-
   border: 0;
-
   background: transparent;
-
   color: #ffffff;
-
   font-size: 28px;
-
   line-height: 1;
-
   cursor: pointer;
 }
-
-
-/* =========================================================
-   SHARE TITLE
-   ========================================================= */
 
 .mp-share-modal h2 {
   margin: 0 0 8px;
-
   color: #ffffff;
-
   font-size: 21px;
-
   line-height: 1.25;
 }
 
-
-/* =========================================================
-   SHARE TEXT
-   ========================================================= */
-
 .mp-share-modal p {
   margin: 0 0 20px;
-
   color: #cbd4e3;
-
   font-size: 14px;
-
   line-height: 1.4;
 }
 
-
-/* =========================================================
-   SHARE ACTIONS
-   ========================================================= */
-
 .mp-share-actions {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 10px;
 }
 
-
-/* =========================================================
-   SHARE ACTION
-   ========================================================= */
-
 .mp-share-action {
   min-height: 48px;
-
   padding: 10px;
-
   border: 0;
-
   border-radius: 12px;
-
   background: #197477;
-
   color: #ffffff;
-
   font-size: 15px;
-
   font-weight: 800;
-
   cursor: pointer;
-
   transition: filter 0.2s ease;
 }
 
@@ -818,204 +444,94 @@ body {
   filter: brightness(1.12);
 }
 
-
-/* =========================================================
-   COPY STATUS
-   ========================================================= */
-
 .mp-copy-status {
   min-height: 20px;
-
   margin-top: 13px;
-
   font-size: 13px;
-
   color: #00eaff;
 }
 
-
 /* =========================================================
-   TABLET
+   RESPONSIVE MEDIA QUERIES
    ========================================================= */
 
 @media (max-width: 700px) {
-
   .mp-card {
     padding-left: 22px;
-
     padding-right: 22px;
-
     border-radius: 28px;
   }
-
-  #mp-image-link {
-  width: min(300px, 72vw);
-  height: min(300px, 32dvh);
-  min-height: 180px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border-radius: 16px;
-  overflow: hidden;
-  text-decoration: none;
 }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
 
 @media (max-width: 480px) {
-
   .mp-card {
     padding-left: 16px;
-
     padding-right: 16px;
-
     border-radius: 24px;
   }
 
-
   .mp-header {
     height: 54px;
-
     min-height: 54px;
   }
-
 
   .mp-home-button {
     width: 40px;
     height: 40px;
-
     top: 7px;
   }
-
 
   .mp-logo {
     font-size: 20px;
   }
 
-
   .mp-sponsored {
     top: 20px;
-
     font-size: 13px;
   }
 
-
-   #mp-image-link {
-    width: min(300px, 72vw);
-
-    height: min(300px, 31dvh);
-  } 
-
-
-  .mp-controls {
-  position: absolute !important;
-  right: 4px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 999 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 10px !important;
-}
-
-
-  .mp-product-info {
-    padding-top: 6px;
-
-    padding-bottom: 6px;
-  }
-
-
   #mp-product-title {
     font-size: 21px;
-
     line-height: 1.23;
   }
 
-
   #mp-product-description {
     font-size: 16px;
-
     line-height: 1.4;
   }
 
-
   .mp-cta-button {
     min-height: 53px;
-
     font-size: 17px;
   }
-
-
-  .mp-disclosure {
-    font-size: 9px;
-  }
-
 }
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
 
 @media (max-width: 360px) {
-
-  .mp-card {
-  position: relative; /* İkonların karta göre konumlanmasını sağlar */
-  /* Diğer kart özellikleriniz burada kalabilir */
-}
-
-
   .mp-logo {
     font-size: 18px;
   }
-
 
   .mp-sponsored {
     font-size: 11px;
   }
 
-
   #mp-image-link {
     width: 74vw;
-
     height: 27dvh;
-
     min-height: 155px;
   }
-
-
-  .mp-controls {
-    height: 56px;
-
-    min-height: 56px;
-  }
-
 
   #mp-product-title {
     font-size: 19px;
   }
 
-
   #mp-product-description {
     font-size: 15px;
-
     line-height: 1.37;
   }
 
-
   .mp-cta-button {
     min-height: 50px;
-
     font-size: 16px;
   }
-
 }
