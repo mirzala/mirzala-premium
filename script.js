@@ -676,6 +676,60 @@
       previousProduct
     );
 
+     
+    // MOBILE REELS-STYLE SWIPE
+    const card = document.querySelector(".mp-card");
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+
+    card.addEventListener("touchstart", function (event) {
+      if (event.touches.length !== 1) return;
+
+      const target = event.target;
+
+      // Butonlar, bağlantılar ve paylaşım penceresinde
+      // kaydırma hareketini devre dışı bırak.
+      if (
+        target.closest("button, a, .mp-share-overlay") ||
+        document.querySelector(".mp-share-overlay.is-open")
+      ) {
+        touchStartTime = 0;
+        return;
+      }
+
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+      touchStartTime = Date.now();
+    }, { passive: true });
+
+    card.addEventListener("touchend", function (event) {
+      if (!touchStartTime || !event.changedTouches.length) return;
+
+      const touch = event.changedTouches[0];
+      const deltaX = touch.clientX - touchStartX;
+      const deltaY = touch.clientY - touchStartY;
+      const duration = Date.now() - touchStartTime;
+
+      touchStartTime = 0;
+
+      // Yalnızca belirgin, dikey ve hızlı kaydırmaları kabul et.
+      if (
+        Math.abs(deltaY) < 60 ||
+        Math.abs(deltaY) <= Math.abs(deltaX) * 1.3 ||
+        duration > 800
+      ) {
+        return;
+      }
+
+      if (deltaY < 0) {
+        nextProduct();      // Yukarı kaydır: sonraki ürün
+      } else {
+        previousProduct();  // Aşağı kaydır: önceki ürün
+      }
+    }, { passive: true });
+
 
     DOM.share.addEventListener(
       "click",
