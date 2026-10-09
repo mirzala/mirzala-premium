@@ -1,40 +1,258 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Mirzala Premium - Test</title>
-  <link rel="stylesheet" href="style.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="robots"
+    content="noindex,nofollow"
+  >
+
+  <title>Mirzala Premium</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 </head>
+
 <body>
 
-  <div id="stage">
-    <div id="topbar">
-      <span class="brand">mirzala</span>
-      <span class="sponsored">Affilate</span>
-    </div>
+  <!-- ==================================================
+       MIRZALA PREMIUM APP WRAPPER
+       ================================================== -->
 
-    <!-- Kartlar script.js tarafından buraya eklenir -->
-    <div id="feed"></div>
+  <main id="mirzala-premium-app">
 
-<!-- Ürün Paylaşım ve Kopyalama Araçları (Her kartın içine eklenecek butonlar) -->
-    <div class="product-actions-template" style="display:none;">
-        <button type="button" class="action-btn btn-whatsapp" title="WhatsApp ile Paylaş" onclick="shareOnWhatsApp(this)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm0 17.9c-1.51 0-2.99-.41-4.28-1.19l-.31-.18-3.21.84.85-3.13-.2-.33c-.84-1.34-1.28-2.9-1.28-4.5 0-4.64 3.78-8.42 8.42-8.42 4.64 0 8.42 3.78 8.42 8.42s-3.78 8.42-8.42 8.42zm4.62-6.05c-.25-.13-1.48-.73-1.71-.82-.23-.09-.4-.13-.57.13-.17.25-.66.82-.81.99-.15.17-.31.19-.56.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.52.12-.12.25-.31.38-.47.13-.17.17-.28.25-.47.08-.19.04-.36-.02-.5-.06-.13-.57-1.38-.79-1.89-.21-.5-.43-.43-.59-.44h-.5c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.17.16 1.61.1.49-.07 1.48-.6 1.69-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/></svg>
+    <!-- ==================================================
+         MAIN CARD WRAPPER
+         ================================================== -->
+
+    <section class="mp-card">
+
+      <!-- ==================================================
+           HEADER WRAPPER
+           ================================================== -->
+
+      <header class="mp-header">
+
+        <button
+          type="button"
+          class="mp-home-button"
+          id="mp-home-button"
+          aria-label="Go to Mirzala home"
+        >
+          <span>⌂</span>
         </button>
-        <button type="button" class="action-btn btn-copy" title="Bağlantıyı Kopyala" onclick="copyProductLink(this)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+        <div class="mp-logo">
+          mirzala
+        </div>
+
+        <div class="mp-sponsored">
+          Sponsored
+        </div>
+
+      </header>
+
+
+      <!-- ==================================================
+           PRODUCT IMAGE WRAPPER
+           ================================================== -->
+
+      <div class="mp-image-wrapper">
+
+        <a
+          href="#"
+          id="mp-image-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            id="mp-product-image"
+            src=""
+            alt=""
+          >
+
+        </a>
+
+      </div>
+
+
+      <!-- ==================================================
+           PRODUCT CONTROLS WRAPPER
+           ================================================== -->
+
+      <div class="mp-controls">
+
+        <button
+          type="button"
+          id="mp-next-button"
+          class="mp-control-button"
+          aria-label="Next product"
+        >
+          <span>⌃</span>
         </button>
-    </div>
-    
-    <div id="nav">
-      <button id="btn-up" aria-label="Önceki ürün">&#9650;</button>
-      <button id="btn-down" aria-label="Sonraki ürün">&#9660;</button>
+
+
+        <button
+          type="button"
+          id="mp-share-button"
+          class="mp-control-button mp-share-button"
+          aria-label="Share product"
+        >
+          <span>↗</span>
+        </button>
+
+
+        <button
+          type="button"
+          id="mp-prev-button"
+          class="mp-control-button"
+          aria-label="Previous product"
+        >
+          <span>⌄</span>
+        </button>
+
+      </div>
+
+
+      <!-- ==================================================
+           PRODUCT INFORMATION WRAPPER
+           ================================================== -->
+
+      <article class="mp-product-info">
+
+        <h1 id="mp-product-title">
+          Loading...
+        </h1>
+
+        <p id="mp-product-description">
+          Loading product...
+        </p>
+
+      </article>
+
+
+      <!-- ==================================================
+           CTA WRAPPER
+           ================================================== -->
+
+      <div class="mp-cta-wrapper">
+
+        <a
+          href="#"
+          id="mp-cta-button"
+          class="mp-cta-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Check It Out →
+        </a>
+
+      </div>
+
+
+      <!-- ==================================================
+           DISCLOSURE WRAPPER
+           ================================================== -->
+
+      <footer class="mp-disclosure">
+
+        <div>
+          <span>*</span>
+          mirzala is reader-supported. Featured products may include affiliate links.
+        </div>
+
+        <div>
+          See our
+          <a
+            href="https://www.mirzala.com/p/affiliate-disclosure.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Affiliate Disclosure
+          </a>.
+        </div>
+
+      </footer>
+
+    </section>
+
+
+    <!-- ==================================================
+         SHARE MODAL WRAPPER
+         ================================================== -->
+
+    <div
+      id="mp-share-overlay"
+      class="mp-share-overlay"
+      aria-hidden="true"
+    >
+
+      <div class="mp-share-modal">
+
+        <button
+          type="button"
+          id="mp-share-close"
+          class="mp-share-close"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        <h2>
+          Share this product
+        </h2>
+
+        <p>
+          Share this Mirzala product with someone.
+        </p>
+
+
+        <div class="mp-share-actions">
+
+          <button
+            type="button"
+            id="mp-whatsapp-button"
+            class="mp-share-action"
+          >
+            WhatsApp
+          </button>
+
+
+          <button
+            type="button"
+            id="mp-copy-button"
+            class="mp-share-action"
+          >
+            Copy Link
+          </button>
+
+        </div>
+
+
+        <div
+          id="mp-copy-status"
+          class="mp-copy-status"
+        ></div>
+
+      </div>
+
     </div>
 
-    <div id="counter"></div>
-  </div>
+  </main>
+
 
   <script src="script.js"></script>
+
 </body>
 </html>
