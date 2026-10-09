@@ -83,7 +83,6 @@ body {
    ========================================================= */
 
 .mp-top-area {
-  position: relative;
   width: 100%;
   min-width: 0;
   display: flex;
@@ -166,7 +165,7 @@ body {
 }
 
 /* =========================================================
-   IMAGE AREA & LINK (Şeffaf ve Çerçevesiz)
+   IMAGE AREA & LINK
    ========================================================= */
 
 .mp-image-area {
@@ -202,13 +201,13 @@ body {
 }
 
 /* =========================================================
-   CONTROLS (Sağa Sabitlenmiş)
+   CONTROLS (Kartın Sağ Kenarına Sabitlenmiş)
    ========================================================= */
 
 .mp-controls {
   position: absolute;
-  right: 4px;
-  top: 50%;
+  right: 8px;
+  top: 34%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -247,7 +246,7 @@ body {
 }
 
 /* =========================================================
-   MIDDLE FLEXIBLE AREA & INFO
+   MIDDLE FLEXIBLE AREA
    ========================================================= */
 
 .mp-middle-area {
