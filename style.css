@@ -928,18 +928,15 @@ body {
 
 
   .mp-controls {
-  position: absolute;
-  right: 8px; /* Kartın sağ kenarına sıfırlar */
-  top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  z-index: 10;
+  position: absolute !important;
+  right: 4px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px !important;
 }
 
 
