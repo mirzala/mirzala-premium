@@ -239,7 +239,7 @@ body {
    ========================================================= */
 
 .mp-logo {
-  font-size: 21px;
+  font-size: 14.7px;
 
   font-weight: 800;
 
@@ -258,17 +258,19 @@ body {
 
 .mp-sponsored {
   position: absolute;
-
+   
   right: 0;
-
+   
   top: 21px;
-
-  font-size: 14px;
-
+   
+  font-size: 14.7px;
+   
   line-height: 1;
-
-  font-weight: 700;
-
+   
+  font-weight: 500;
+   
+  opacity: 0.6;
+   
   color: #eeeeee;
 }
 
