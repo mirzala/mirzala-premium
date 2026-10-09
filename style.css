@@ -1,325 +1,322 @@
-yukraı aşağı oklar yerine paylaştaki gibi ince ok kullanmak istiyorum ve html css ile yapamadım. 
-Yapıştırılan metin(4).txt
-Belge
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
-
-  <meta
-    name="robots"
-    content="noindex,nofollow"
-  >
-
-  <title>Mirzala Premium</title>
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-</head>
-
-
-<body>
-
-  <!-- =====================================================
-       MIRZALA PREMIUM APP
-       ===================================================== -->
-
-  <main id="mirzala-premium-app">
-
-
-    <!-- ===================================================
-         PREMIUM CARD WRAPPER
-         =================================================== -->
-
-    <section class="mp-card">
-
-
-      <!-- =================================================
-           TOP AREA WRAPPER
-           Header + Image + Controls
-           ================================================= -->
-
-      <div class="mp-top-area">
-
-
-        <!-- ===============================================
-             HEADER
-             =============================================== -->
-
-        <header class="mp-header">
-
-          <button
-            type="button"
-            class="mp-home-button"
-            id="mp-home-button"
-            aria-label="Go to Mirzala home"
-          >
-            <span class="mp-home-icon">⌂</span>
-          </button>
-
-
-          <div class="mp-logo">
-            mirzala selection
-          </div>
-
-
-          <div class="mp-sponsored">
-            Affiliate
-          </div>
-
-        </header>
-
-
-        <!-- ===============================================
-             PRODUCT IMAGE
-             =============================================== -->
-
-        <div class="mp-image-area">
-
-          <a
-            href="#"
-            id="mp-image-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            <img
-              id="mp-product-image"
-              src=""
-              alt=""
-            >
-
-          </a>
-
-        </div>
-
-
-        <!-- ===============================================
-             PRODUCT CONTROLS
-             =============================================== -->
-
-        <div class="mp-controls">
-  <!-- ... diğerleri ... -->
-  <button type="button" id="mp-next-button" class="mp-control-button" aria-label="Next product">
-    <span>&#708;</span> <!-- Daha ince bir yukarı ok (MODERNLENDİ) -->
-  </button>
-
-  <button type="button" id="mp-share-button" class="mp-control-button mp-share-button" aria-label="Share product">
-    <span>↗</span> <!-- Paylaş ikonu (AYNI KALSIN) -->
-  </button>
-
-  <button type="button" id="mp-prev-button" class="mp-control-button" aria-label="Previous product">
-    <span>&#709;</span> <!-- Daha ince bir aşağı ok (MODERNLENDİ) -->
-  </button>
-  <!-- ... diğerleri ... -->
-</div>
-
-
-      </div>
-
-
-      <!-- =================================================
-           FLEXIBLE PRODUCT CONTENT
-           ================================================= -->
-
-      <div class="mp-middle-area">
-
-
-        <article class="mp-product-info">
-
-          <h1 id="mp-product-title">
-            Loading...
-          </h1>
-
-
-          <p id="mp-product-description">
-            Loading product...
-          </p>
-
-        </article>
-
-
-      </div>
-
-
-      <!-- =================================================
-           BOTTOM AREA
-           CTA + DISCLOSURE
-           ================================================= -->
-
-      <div class="mp-bottom-area">
-
-
-        <!-- ===============================================
-             CTA
-             =============================================== -->
-
-        <div class="mp-cta-wrapper">
-
-          <a
-            href="#"
-            id="mp-cta-button"
-            class="mp-cta-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Check It Out →
-          </a>
-
-        </div>
-
-
-        <!-- ===============================================
-             DISCLOSURE
-             =============================================== -->
-
-        <footer class="mp-disclosure">
-
-          <div>
-            <span>*</span>
-            mirzala is reader-supported. Featured products may include affiliate links.
-          </div>
-
-          <div>
-            See our
-            <a
-              href="https://www.mirzala.com/p/affiliate-disclosure.html" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-            > 
-              Affiliate Disclosure 
-            </a>. 
-          </div> 
- 
-        </footer> 
- 
- 
-      </div> 
- 
- 
-    </section> 
- 
- 
-    <!-- =================================================== 
-         SHARE MODAL 
-         =================================================== --> 
- 
-    <div 
-      id="mp-share-overlay" 
-      class="mp-share-overlay" 
-      aria-hidden="true" 
-    > 
- 
-      <div class="mp-share-modal"> 
- 
- 
-        <button 
-          type="button" 
-          id="mp-share-close" 
-          class="mp-share-close" 
-          aria-label="Close" 
-        > 
-          × 
-        </button> 
- 
- 
-        <h2> 
-          Share this product 
-        </h2> 
- 
- 
-        <p> 
-          Share this Mirzala product with someone. 
-        </p> 
- 
- 
-        <div class="mp-share-actions"> 
- 
- 
-          <button 
-            type="button" 
-            id="mp-whatsapp-button" 
-            class="mp-share-action" 
-          > 
-            WhatsApp 
-          </button> 
- 
- 
-          <button 
-            type="button" 
-            id="mp-copy-button" 
-            class="mp-share-action" 
-          > 
-            Copy Link 
-          </button> 
- 
- 
-        </div> 
- 
- 
-        <div 
-          id="mp-copy-status" 
-          class="mp-copy-status" 
-        ></div> 
- 
- 
-      </div> 
- 
-    </div> 
- 
- 
-  </main> 
- 
- 
-  <script src="script.js"></script> 
- 
-</body> kodlar bunlar nereye ne ekleyeyim 
- 
-</html>
-
-Okların değişmesi ürün başlığı, açıklama, CTA butonu ve affiliate açıklamasının yerini değiştirmemeli. Önceki değişiklikte bu alanların CSS kurallarını değiştirmemiz gerekmiyordu.
-
-Mevcut style.css dosyanın en sonuna, @media bloklarının da altına şu kodu ekle. Bu kod ürün içeriğini orta alanda, CTA ve affiliate açıklamasını ise kartın alt bölümünde tutar.
-
-/* MIRZALA PREMIUM — LAYOUT RESTORE */
-
-.mp-card {
-  grid-template-rows: auto minmax(0, 1fr) auto;
+/* =========================================================
+   MIRZALA PREMIUM
+   FULLSCREEN LAYOUT
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #0d1729;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  width: 100vw;
+  height: 100dvh;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* =========================================================
+   MAIN APP
+   ========================================================= */
+
+#mirzala-premium-app {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #0d1729;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   MAIN PREMIUM CARD
+   ========================================================= */
+
+.mp-card {
+  position: relative;
+  width: auto;
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  max-width: 100vw;
+  max-height: 100dvh;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  background: radial-gradient(
+      circle at 50% 8%,
+      rgba(55, 75, 110, 0.30),
+      transparent 25%
+    ),
+    #0d1729;
+  color: #ffffff;
+  border-top: 4px solid #00eaff;
+  border-right: 4px solid #00e66f;
+  border-bottom: 4px solid #ff008c;
+  border-left: 4px solid #7200ff;
+  border-radius: 34px;
+  padding: 0 28px 0 28px;
+}
+
+/* =========================================================
+   TOP AREA
+   ========================================================= */
+
 .mp-top-area {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   flex-shrink: 0;
 }
 
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.mp-header {
+  position: relative;
+  width: 100%;
+  height: 58px;
+  min-height: 58px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   HOME BUTTON
+   ========================================================= */
+
+.mp-home-button {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.12);
+  color: #00eaff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.mp-home-button:hover {
+  transform: scale(1.05);
+  background: rgba(0,0,0,0.25);
+}
+
+.mp-home-icon {
+  font-size: 25px;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   LOGO & SPONSORED
+   ========================================================= */
+
+.mp-logo {
+  font-size: 14.7px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.25);
+}
+
+.mp-sponsored {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  font-size: 14.7px;
+  line-height: 1;
+  font-weight: 500;
+  opacity: 0.6;
+  color: #eeeeee;
+}
+
+/* =========================================================
+   IMAGE AREA & LINK
+   ========================================================= */
+
+.mp-image-area {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#mp-image-link {
+  width: min(300px, 72vw);
+  height: min(300px, 32dvh);
+  min-height: 180px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+#mp-product-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  background: transparent;
+}
+
+/* =========================================================
+   CONTROLS (Kartın Sağ Kenarına Sabitlenmiş)
+   ========================================================= */
+
+.mp-controls {
+  position: absolute;
+  right: 8px;
+  top: 42%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 100;
+}
+
+.mp-control-button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #00eaff;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.mp-control-button span {
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+.mp-control-button:hover {
+  transform: scale(1.15);
+}
+
+.mp-control-button:active {
+  transform: scale(0.95);
+}
+
+.mp-share-button {
+  color: #ffffff;
+  font-size: 21px;
+}
+
+.mp-share-button span {
+  transform: none;
+}
+
+/* =========================================================
+   MIDDLE FLEXIBLE AREA
+   ========================================================= */
+
 .mp-middle-area {
+  flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  padding: 10px 0;
 }
 
 .mp-product-info {
   width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
   margin: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+#mp-product-title {
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.25;
+  font-weight: 800;
+  text-align: center;
+  color: #ffffff;
+}
+
+#mp-product-description {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: clamp(13px, 1.4vw, 16px);
+  line-height: 1.42;
+  font-weight: 400;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+/* =========================================================
+   BOTTOM AREA & CTA
+   ========================================================= */
+
 .mp-bottom-area {
+  grid-row: 3;
   width: 100%;
   flex-shrink: 0;
-  padding-bottom: 8px;
+  margin-top: auto;
+  padding-bottom: 12px;
+  box-sizing: border-box;
 }
 
 .mp-cta-wrapper {
@@ -327,662 +324,223 @@ Mevcut style.css dosyanın en sonuna, @media bloklarının da altına şu kodu e
   margin: 0;
 }
 
+.mp-cta-button {
+  width: 100%;
+  min-height: 54px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #197477;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.mp-cta-button:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
 .mp-disclosure {
   width: 100%;
   margin-top: 6px;
   text-align: center;
-}
-
-Önemli: Bu ekleme mevcut düzeni yeniden sabitler; ancak içeriğin önceki konumundan neden kaydığını yalnızca bu kodla kesin olarak belirleyemeyiz.
-
-Ürün başlığının, açıklamanın ve CTA'nın tam olarak eski ekran görüntüsündeki konumlarına dönmesini istiyorsan, şu an kullandığın güncel style.css dosyasını gönder. Mevcut ok tasarımını koruyarak yalnızca kaymaya neden olan kuralı düzeltebiliriz; diğer tasarımları değiştirmeyiz.
-
-kodu var olanları silmeden sadece en alta ekleyecğim değil mi
-
-Evet, doğru. Mevcut kodlardan hiçbirini silmeden, verdiğim CSS kodunu style.css dosyasının en altına ekle.
-
-style.css dosyasını aç.
-
-En alta, mevcut kodların sonuna git.
-
-Verdiğim kodu yapıştır.
-
-Kaydet ve sayfayı Ctrl + F5 ile yenile.
-
-Dikkat: Bu yöntem mevcut kuralları silmez; ancak bazı CSS kurallarını geçersiz kılarak düzeni etkileyebilir. Ürün başlığı, açıklama, CTA ve affiliate açıklamasının eski konumlarına kesin döneceğini mevcut görünümü kontrol etmeden garanti edemem.
-
-Yapıştırılan metin(5).txt
-Belge
-burada cta buton ve affilate açıklamasını tabana sabitle ve ürün ad ve açıklaması ise yatay dikey ortalansın ve bana tam son hal kodu ver 
-
-İstediğin düzeni mevcut tasarımını koruyarak hazırladım:
-
-Ürün adı ve açıklaması: Kalan orta alanın hem yatay hem dikey merkezinde.
-
-CTA butonu: Kartın alt bölümünde, tabana yakın sabit.
-
-Affiliate açıklaması: CTA butonunun hemen altında, kartın en alt bölümünde.
-
-İnce yukarı/aşağı oklar: Mevcut SVG stilleri korunuyor.
-
-Paylaşım butonu: Beyaz ok ve mevcut işlevi korunuyor.
-
-JavaScript: Değiştirilmedi.
-
-Tam düzeltilmiş CSS dosyasını al
-
-Nasıl uygulayacaksın?
-
-Yukarıdaki dosyayı aç.
-
-İçindeki kodun tamamını kopyala.
-
-Mevcut style.css dosyasının tamamını bu yeni kodla değiştir.
-
-Kaydet ve sayfayı Ctrl + F5 ile yenile.
-
-Önemli: Yalnızca style.css dosyasını değiştir. HTML ve script.js dosyalarına dokunma. Böylece ürün değiştirme, paylaşım ve bağlantı işlevlerini etkilemeden istediğin yerleşimi uygulamış olursun.
-
-Kullanım yarın saat 00:17 itibarıyla sıfırlanana kadar sohbet duraklatıldı
-Dosya veya görsel içeren sohbetler için limite ulaştın. Yalnızca metin içeren yeni bir sohbet başlat veya devam etmek için şimdi planını yükselt.
-Yeni sohbet
-Ücretsiz teklifi kullan
-vidIQ
-
-/* =========================================================
-MIRZALA PREMIUM
-FULLSCREEN LAYOUT
-========================================================= */
-
-/* =========================================================
-GLOBAL RESET
-========================================================= */
-
-html,
-body {
-width: 100%;
-height: 100%;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background: #0d1729;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-width: 100vw;
-height: 100dvh;
-min-width: 0;
-min-height: 0;
-}
-
-/* =========================================================
-MAIN APP
-========================================================= */
-
-#mirzala-premium-app {
-position: fixed;
-inset: 0;
-width: 100vw;
-height: 100dvh;
-min-width: 0;
-min-height: 0;
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-overflow: hidden;
-background: #0d1729;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-/* =========================================================
-MAIN PREMIUM CARD
-========================================================= */
-
-.mp-card {
-position: relative;
-width: auto;
-height: 100%;
-aspect-ratio: 9 / 16;
-max-width: 100vw;
-max-height: 100dvh;
-min-width: 0;
-min-height: 0;
-box-sizing: border-box;
-display: grid;
-grid-template-rows: auto minmax(0, 1fr) auto;
-overflow: hidden;
-background: radial-gradient(
-circle at 50% 8%,
-rgba(55, 75, 110, 0.30),
-transparent 25%
-),
-#0d1729;
-color: #ffffff;
-border-top: 4px solid #00eaff;
-border-right: 4px solid #00e66f;
-border-bottom: 4px solid #ff008c;
-border-left: 4px solid #7200ff;
-border-radius: 34px;
-padding: 0 28px 0 28px;
-}
-
-/* =========================================================
-TOP AREA
-========================================================= */
-
-.mp-top-area {
-width: 100%;
-min-width: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-flex-shrink: 0;
-}
-
-/* =========================================================
-HEADER
-========================================================= */
-
-.mp-header {
-position: relative;
-width: 100%;
-height: 58px;
-min-height: 58px;
-box-sizing: border-box;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-shrink: 0;
-}
-
-/* =========================================================
-HOME BUTTON
-========================================================= */
-
-.mp-home-button {
-position: absolute;
-left: 0;
-top: 9px;
-width: 42px;
-height: 42px;
-padding: 0;
-border-radius: 50%;
-border: 1px solid rgba(255,255,255,0.20);
-background: rgba(0,0,0,0.12);
-color: #00eaff;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.mp-home-button {
-transform: scale(1.05);
-background: rgba(0,0,0,0.25);
-}
-
-.mp-home-icon {
-font-size: 25px;
-line-height: 1;
-transform: translateY(-1px);
-}
-
-/* =========================================================
-LOGO & SPONSORED
-========================================================= */
-
-.mp-logo {
-font-size: 14.7px;
-font-weight: 800;
-letter-spacing: 2px;
-color: #ffffff;
-text-shadow: 0 0 8px rgba(255,255,255,0.25);
-}
-
-.mp-sponsored {
-position: absolute;
-right: 0;
-top: 21px;
-font-size: 14.7px;
-line-height: 1;
-font-weight: 500;
-opacity: 0.6;
-color: #eeeeee;
-}
-
-/* =========================================================
-IMAGE AREA & LINK
-========================================================= */
-
-.mp-image-area {
-width: 100%;
-min-width: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-shrink: 0;
-}
-
-#mp-image-link {
-width: min(300px, 72vw);
-height: min(300px, 32dvh);
-min-height: 180px;
-box-sizing: border-box;
-display: flex;
-align-items: center;
-justify-content: center;
-background: transparent;
-border-radius: 16px;
-overflow: hidden;
-text-decoration: none;
-}
-
-#mp-product-image {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-border-radius: 16px;
-background: transparent;
-}
-
-/* =========================================================
-CONTROLS (Kartın Sağ Kenarına Sabitlenmiş)
-========================================================= */
-
-.mp-controls {
-position: absolute;
-right: 8px;
-top: 42%;
-transform: translateY(-50%);
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 12px;
-z-index: 100;
-}
-
-.mp-control-button {
-width: 30px;
-height: 30px;
-padding: 0;
-border: 0;
-background: transparent;
-color: #00eaff;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: transform 0.18s ease, opacity 0.18s ease;
-}
-
-.mp-control-button svg {
-display: block;
-width: 16px;
-height: 16px;
-fill: none;
-stroke: currentColor;
-stroke-width: 1.5;
-stroke-linecap: round;
-stroke-linejoin: round;
-}
-
-.mp-control-button span {
-display: inline-block;
-line-height: 1;
-}
-
-.mp-control-button {
-transform: scale(1.10);
-}
-
-.mp-control-button {
-transform: scale(0.95);
-}
-
-.mp-share-button {
-color: #ffffff;
-font-size: 21px;
-}
-
-.mp-share-button span {
-transform: none;
-}
-
-/* =========================================================
-MIDDLE FLEXIBLE AREA
-========================================================= */
-
-.mp-middle-area {
-width: 100%;
-min-width: 0;
-min-height: 0;
-overflow-y: auto;
-overflow-x: hidden;
-display: flex;
-align-items: center;
-justify-content: center;
-box-sizing: border-box;
-scrollbar-width: thin;
-}
-
-.mp-product-info {
-width: 100%;
-max-width: 700px;
-box-sizing: border-box;
-padding: 10px 0 10px;
-margin: auto;
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-
-#mp-product-title {
-width: 100%;
-margin: 0 0 10px;
-padding: 0;
-font-size: clamp(16px, 1.8vw, 20px);
-line-height: 1.25;
-font-weight: 800;
-text-align: center;
-color: #ffffff;
-}
-
-#mp-product-description {
-width: 100%;
-margin: 0;
-padding: 0;
-font-size: clamp(13px, 1.4vw, 16px);
-line-height: 1.42;
-font-weight: 400;
-text-align: center;
-color: #f1f1f1;
-}
-
-/* =========================================================
-BOTTOM AREA & CTA
-========================================================= */
-
-.mp-bottom-area {
-width: 100%;
-min-width: 0;
-box-sizing: border-box;
-flex-shrink: 0;
-padding-bottom: 8px;
-}
-
-.mp-cta-wrapper {
-width: 100%;
-margin: 0;
-}
-
-.mp-cta-button {
-width: 100%;
-min-height: 54px;
-box-sizing: border-box;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 15px;
-background: #197477;
-border: 1px solid rgba(255,255,255,0.18);
-color: #ffffff;
-text-decoration: none;
-font-size: 18px;
-line-height: 1;
-font-weight: 800;
-transition: filter 0.2s ease, transform 0.2s ease;
-}
-
-.mp-cta-button {
-filter: brightness(1.12);
-transform: translateY(-1px);
-}
-
-.mp-disclosure {
-width: 100%;
-margin-top: 6px;
-text-align: center;
-font-size: 10px;
-line-height: 1.45;
-color: #9ca9bd;
+  font-size: 10px;
+  line-height: 1.45;
+  color: #9ca9bd;
 }
 
 .mp-disclosure span {
-color: #00eaff;
-font-weight: 800;
+  color: #00eaff;
+  font-weight: 800;
 }
 
 .mp-disclosure a {
-color: #00eaff;
-font-weight: 700;
-text-decoration: underline;
+  color: #00eaff;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /* =========================================================
-SHARE OVERLAY & MODAL
-========================================================= */
+   SHARE OVERLAY & MODAL
+   ========================================================= */
 
 .mp-share-overlay {
-position: fixed;
-inset: 0;
-z-index: 9999;
-display: none;
-align-items: center;
-justify-content: center;
-padding: 20px;
-box-sizing: border-box;
-background: rgba(0,0,0,0.72);
-backdrop-filter: blur(5px);
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(5px);
 }
 
 .mp-share-overlay.is-open {
-display: flex;
+  display: flex;
 }
 
 .mp-share-modal {
-position: relative;
-width: 100%;
-max-width: 380px;
-box-sizing: border-box;
-padding: 28px 24px 24px;
-border-radius: 22px;
-background: #111c30;
-border: 1px solid rgba(255,255,255,0.15);
-box-shadow: 0 20px 70px rgba(0,0,0,0.5);
-text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+  padding: 28px 24px 24px;
+  border-radius: 22px;
+  background: #111c30;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 70px rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 .mp-share-close {
-position: absolute;
-right: 13px;
-top: 9px;
-width: 34px;
-height: 34px;
-padding: 0;
-border: 0;
-background: transparent;
-color: #ffffff;
-font-size: 28px;
-line-height: 1;
-cursor: pointer;
+  position: absolute;
+  right: 13px;
+  top: 9px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .mp-share-modal h2 {
-margin: 0 0 8px;
-color: #ffffff;
-font-size: 21px;
-line-height: 1.25;
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1.25;
 }
 
 .mp-share-modal p {
-margin: 0 0 20px;
-color: #cbd4e3;
-font-size: 14px;
-line-height: 1.4;
+  margin: 0 0 20px;
+  color: #cbd4e3;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .mp-share-actions {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .mp-share-action {
-min-height: 48px;
-padding: 10px;
-border: 0;
-border-radius: 12px;
-background: #197477;
-color: #ffffff;
-font-size: 15px;
-font-weight: 800;
-cursor: pointer;
-transition: filter 0.2s ease;
+  min-height: 48px;
+  padding: 10px;
+  border: 0;
+  border-radius: 12px;
+  background: #197477;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: filter 0.2s ease;
 }
 
-.mp-share-action {
-filter: brightness(1.12);
+.mp-share-action:hover {
+  filter: brightness(1.12);
 }
 
 .mp-copy-status {
-min-height: 20px;
-margin-top: 13px;
-font-size: 13px;
-color: #00eaff;
+  min-height: 20px;
+  margin-top: 13px;
+  font-size: 13px;
+  color: #00eaff;
 }
 
 /* =========================================================
-RESPONSIVE MEDIA QUERIES
-========================================================= */
+   RESPONSIVE MEDIA QUERIES
+   ========================================================= */
 
 @media (max-width: 700px) {
-.mp-card {
-padding-left: 22px;
-padding-right: 22px;
-border-radius: 28px;
-}
+  .mp-card {
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 28px;
+  }
 }
 
 @media (max-width: 480px) {
-.mp-card {
-padding-left: 16px;
-padding-right: 16px;
-border-radius: 24px;
-}
+  .mp-card {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 24px;
+  }
 
-.mp-header {
-height: 54px;
-min-height: 54px;
-}
+  .mp-header {
+    height: 54px;
+    min-height: 54px;
+  }
 
-.mp-home-button {
-width: 40px;
-height: 40px;
-top: 7px;
-}
+  .mp-home-button {
+    width: 40px;
+    height: 40px;
+    top: 7px;
+  }
 
-.mp-logo {
-font-size: 20px;
-}
+  .mp-logo {
+    font-size: 20px;
+  }
 
-.mp-sponsored {
-top: 20px;
-font-size: 13px;
-}
+  .mp-sponsored {
+    top: 20px;
+    font-size: 13px;
+  }
 
-#mp-product-title {
-font-size: 21px;
-line-height: 1.23;
-}
+  #mp-product-title {
+    font-size: 21px;
+    line-height: 1.23;
+  }
 
-#mp-product-description {
-font-size: 16px;
-line-height: 1.4;
-}
+  #mp-product-description {
+    font-size: 16px;
+    line-height: 1.4;
+  }
 
-.mp-cta-button {
-min-height: 53px;
-font-size: 17px;
-}
+  .mp-cta-button {
+    min-height: 53px;
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 360px) {
-.mp-logo {
-font-size: 18px;
-}
+  .mp-logo {
+    font-size: 18px;
+  }
 
-.mp-sponsored {
-font-size: 11px;
-}
+  .mp-sponsored {
+    font-size: 11px;
+  }
 
-#mp-image-link {
-width: 74vw;
-height: 27dvh;
-min-height: 155px;
-}
+  #mp-image-link {
+    width: 74vw;
+    height: 27dvh;
+    min-height: 155px;
+  }
 
-#mp-product-title {
-font-size: 19px;
-}
+  #mp-product-title {
+    font-size: 19px;
+  }
 
-#mp-product-description {
-font-size: 15px;
-line-height: 1.37;
-}
+  #mp-product-description {
+    font-size: 15px;
+    line-height: 1.37;
+  }
 
-.mp-cta-button {
-min-height: 50px;
-font-size: 16px;
+  .mp-cta-button {
+    min-height: 50px;
+    font-size: 16px;
+  }
 }
-}
-/* MIRZALA PREMIUM — LAYOUT RESTORE */
-
-.mp-card {
-grid-template-rows: auto minmax(0, 1fr) auto;
-}
-
-.mp-top-area {
-flex-shrink: 0;
-}
-
-.mp-middle-area {
-min-height: 0;
-overflow-y: auto;
-overflow-x: hidden;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.mp-product-info {
-width: 100%;
-margin: auto;
-text-align: center;
-}
-
-.mp-bottom-area {
-width: 100%;
-flex-shrink: 0;
-padding-bottom: 8px;
-}
-
-.mp-cta-wrapper {
-width: 100%;
-margin: 0;
-}
-
-.mp-disclosure {
-width: 100%;
-margin-top: 6px;
-text-align: center;
-}
-
-Kapat
