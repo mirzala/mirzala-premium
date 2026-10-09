@@ -552,3 +552,44 @@ body {
     font-size: 16px;
   }
 }
+/* MIRZALA PREMIUM — LAYOUT RESTORE */
+
+.mp-card {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.mp-top-area {
+  flex-shrink: 0;
+}
+
+.mp-middle-area {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-product-info {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.mp-bottom-area {
+  width: 100%;
+  flex-shrink: 0;
+  padding-bottom: 8px;
+}
+
+.mp-cta-wrapper {
+  width: 100%;
+  margin: 0;
+}
+
+.mp-disclosure {
+  width: 100%;
+  margin-top: 6px;
+  text-align: center;
+}
