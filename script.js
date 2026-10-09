@@ -45,6 +45,31 @@ document.getElementById("btn-up").addEventListener("click", function () { go(-1)
 document.getElementById("btn-down").addEventListener("click", function () { go(1); });
 
 // Klavye okları
+
+// WhatsApp ile Paylaş
+window.shareOnWhatsApp = function(title, mki) {
+    var shareUrl = window.location.origin + window.location.pathname + "?mki=" + mki;
+    var text = encodeURIComponent("🔥 " + title + "\n\nFırsatı incelemek için:\n" + shareUrl);
+    window.open("https://api.whatsapp.com/send?text=" + text, "_blank");
+};
+
+// Bağlantıyı Kopyala
+window.copyProductLink = function(mki, btnElement) {
+    var shareUrl = window.location.origin + window.location.pathname + "?mki=" + mki;
+    
+    navigator.clipboard.writeText(shareUrl).then(function() {
+        var originalText = btnElement.textContent;
+        btnElement.textContent = "✓ Kopyalandı";
+        btnElement.style.borderColor = "#00ff87";
+        btnElement.style.color = "#00ff87";
+        
+        setTimeout(function() {
+            btnElement.textContent = originalText;
+            btnElement.style.borderColor = "";
+            btnElement.style.color = "";
+        }, 2000);
+    });
+};
 document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowDown") { e.preventDefault(); go(1); }
   if (e.key === "ArrowUp")   { e.preventDefault(); go(-1); }
