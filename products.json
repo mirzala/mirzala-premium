@@ -1,16 +1,24 @@
-[
-  {
-    "id": "urun-2",
-    "title": "Test Ürün 2",
-    "description": "İkinci ürünün açıklaması. Aşağı kaydırarak sonraki ürüne geçebilirsiniz.",
-    "image": "https://picsum.photos/id/30/600/600",
-    "url": "https://www.example.com/2"
-  },
-  {
-    "id": "urun-3",
-    "title": "Test Ürün 3",
-    "description": "Üçüncü ürün. Klavyede yukarı/aşağı ok tuşları da çalışır.",
-    "image": "https://picsum.photos/id/40/600/600",
-    "url": "https://www.example.com/3"
-  }
-]
+{
+  "products": [
+    {
+      "id": "secret-roll-on-12",
+      "title": "Secret Roll-On Powder Fresh, 1.8 oz (12-Pack)",
+      "description": "A classic Powder Fresh antiperspirant and deodorant made for women, with a pH-balanced formula designed to be gentle on skin. The brand promises 24-hour sweat and odor protection, wrapped in a clean, light powder scent that stays pleasant without feeling heavy. It goes on smooth and dries quickly, so there is no sticky feeling or white marks on clothes during a busy day. Whether you use it for daily wear or active days, this 12-pack makes it easy to stock up and keep a spare in every bag.",
+      "image": "https://m.media-amazon.com/images/I/71example-image.jpg",
+      "productUrl": "https://www.amazon.com/dp/EXAMPLE",
+      "brand": "Secret",
+      "price": "",
+      "sponsored": true
+    },
+    {
+      "id": "example-product-002",
+      "title": "Example Premium Product",
+      "description": "This is a second test product. Replace this information with your real product data.",
+      "image": "https://m.media-amazon.com/images/I/example-product.jpg",
+      "productUrl": "https://www.amazon.com/dp/EXAMPLE2",
+      "brand": "Example",
+      "price": "",
+      "sponsored": true
+    }
+  ]
+}
