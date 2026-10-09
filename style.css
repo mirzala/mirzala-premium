@@ -347,7 +347,7 @@ body {
 .mp-controls {
   position: absolute;
   right: 14px;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: auto;
   height: auto;
@@ -361,7 +361,6 @@ body {
   flex-shrink: 0;
   z-index: 10;
 }
-
 
 /* =========================================================
    CONTROL BUTTON
