@@ -46,22 +46,12 @@ body {
 
 #mirzala-premium-app {
   position: fixed;
-
   inset: 0;
-
   width: 100vw;
   height: 100dvh;
-
-  min-width: 0;
-  min-height: 0;
-
-  margin: 0;
-  padding: 0;
-
-  box-sizing: border-box;
-
-  overflow: hidden;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #0d1729;
 }
 
@@ -72,34 +62,24 @@ body {
 
 .mp-card {
   position: relative;
-
-  width: 100%;
+  width: auto;
   height: 100%;
-
-  min-width: 0;
-  min-height: 0;
-
+  aspect-ratio: 9 / 16;
+  max-width: 100vw;
+  max-height: 100dvh;
   box-sizing: border-box;
-
   display: grid;
-
-  grid-template-rows:
-    auto
-    minmax(0, 1fr)
-    auto;
-
+  grid-template-rows: auto minmax(0, 1fr) auto;
   overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 50% 8%,
-      rgba(55, 75, 110, 0.30),
-      transparent 25%
-    ),
-    #0d1729;
-
+  background: radial-gradient(circle at 50% 8%, rgba(55, 75, 110, 0.30), transparent 25%), #0d1729;
   color: #ffffff;
-
+  border-top: 4px solid #00eaff;
+  border-right: 4px solid #00e66f;
+  border-bottom: 4px solid #ff008c;
+  border-left: 4px solid #7200ff;
+  border-radius: 34px;
+  padding: 0 28px 0 28px;
+}
 
   /* ================================================
      FOUR DIFFERENT BORDER COLORS
