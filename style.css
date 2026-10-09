@@ -215,7 +215,9 @@ body {
   gap: 12px;
   z-index: 100;
 }
-
+.mp-control-button:not(.mp-share-button) {
+  font-size: 34px;
+}
 .mp-control-button {
   width: 30px;
   height: 30px;
