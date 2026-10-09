@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  touch-action: none;
   background: radial-gradient(
       circle at 50% 8%,
       rgba(55, 75, 110, 0.30),
@@ -278,8 +279,8 @@ body {
   box-sizing: border-box;
 
   overflow-x: hidden;
-
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   display: flex;
 
